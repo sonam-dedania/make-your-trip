@@ -1,22 +1,26 @@
 {
   "files": {
-    "main.css": "/make-your-trip/static/css/main.9d5b29c0.chunk.css",
-    "main.js": "/make-your-trip/static/js/main.0c694e3c.chunk.js",
-    "main.js.map": "/make-your-trip/static/js/main.0c694e3c.chunk.js.map",
-    "runtime-main.js": "/make-your-trip/static/js/runtime-main.2182b58b.js",
-    "runtime-main.js.map": "/make-your-trip/static/js/runtime-main.2182b58b.js.map",
-    "static/js/2.12c7df72.chunk.js": "/make-your-trip/static/js/2.12c7df72.chunk.js",
-    "static/js/2.12c7df72.chunk.js.map": "/make-your-trip/static/js/2.12c7df72.chunk.js.map",
-    "static/js/3.99827138.chunk.js": "/make-your-trip/static/js/3.99827138.chunk.js",
-    "static/js/3.99827138.chunk.js.map": "/make-your-trip/static/js/3.99827138.chunk.js.map",
+    "main.css": "/make-your-trip/static/css/main.bc4b01f8.chunk.css",
+    "main.js": "/make-your-trip/static/js/main.e9d55c9b.chunk.js",
+    "main.js.map": "/make-your-trip/static/js/main.e9d55c9b.chunk.js.map",
+    "runtime-main.js": "/make-your-trip/static/js/runtime-main.c19504fa.js",
+    "runtime-main.js.map": "/make-your-trip/static/js/runtime-main.c19504fa.js.map",
+    "static/css/2.0e6594e1.chunk.css": "/make-your-trip/static/css/2.0e6594e1.chunk.css",
+    "static/js/2.3bd716fb.chunk.js": "/make-your-trip/static/js/2.3bd716fb.chunk.js",
+    "static/js/2.3bd716fb.chunk.js.map": "/make-your-trip/static/js/2.3bd716fb.chunk.js.map",
+    "static/js/3.32d7839e.chunk.js": "/make-your-trip/static/js/3.32d7839e.chunk.js",
+    "static/js/3.32d7839e.chunk.js.map": "/make-your-trip/static/js/3.32d7839e.chunk.js.map",
     "index.html": "/make-your-trip/index.html",
-    "static/css/main.9d5b29c0.chunk.css.map": "/make-your-trip/static/css/main.9d5b29c0.chunk.css.map",
-    "static/js/2.12c7df72.chunk.js.LICENSE.txt": "/make-your-trip/static/js/2.12c7df72.chunk.js.LICENSE.txt"
+    "static/css/2.0e6594e1.chunk.css.map": "/make-your-trip/static/css/2.0e6594e1.chunk.css.map",
+    "static/css/main.bc4b01f8.chunk.css.map": "/make-your-trip/static/css/main.bc4b01f8.chunk.css.map",
+    "static/js/2.3bd716fb.chunk.js.LICENSE.txt": "/make-your-trip/static/js/2.3bd716fb.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.min.css": "/make-your-trip/static/media/fontawesome-webfont.f691f37e.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.2182b58b.js",
-    "static/js/2.12c7df72.chunk.js",
-    "static/css/main.9d5b29c0.chunk.css",
-    "static/js/main.0c694e3c.chunk.js"
+    "static/js/runtime-main.c19504fa.js",
+    "static/css/2.0e6594e1.chunk.css",
+    "static/js/2.3bd716fb.chunk.js",
+    "static/css/main.bc4b01f8.chunk.css",
+    "static/js/main.e9d55c9b.chunk.js"
   ]
 }
