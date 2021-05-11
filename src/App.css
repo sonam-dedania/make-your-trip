@@ -38,14 +38,37 @@
 }
 /**********************************/
 
+@font-face {
+  font-family: poppins-semibold;
+  src: url(Fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: poppins-regular;
+  src: url(Fonts/Poppins-Regular.ttf);
+}
+
 .outer-container{
   background-color: #FF5A54;
   margin: 20px;
   border-radius: 10px;
-  padding-top: 90px;
-  padding-bottom: 90px;
-  padding-left: 70px;
-  padding-right: 70px;
+  padding-top: 110px;
+  padding-bottom: 110px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.h3-header{
+  font-family: poppins-semibold;
+}
+.normal-para
+{
+  font-family: poppins-regular; 
+  font-size: 13px;
+}
+.normal-para1
+{
+  font-family: poppins-regular; 
+  font-size: 13px;
+  margin-top: 10px;  
 }
 .inner-container
 {
@@ -62,33 +85,39 @@
 .right-col
 {
   background-color:#ffffff;
-  padding-left: 40px!important;
-  padding-right: 40px!important;
-  padding-top: 50px!important;
-  padding-bottom: 50px!important;
+  padding-left: 80px!important;
+  padding-right: 80px!important;
+  padding-top: 90px!important;
+  padding-bottom: 70px!important;
 }
 .facebook-btn
 {
-  font-size: 14px!important;
+  font-size: 11px!important;
   font-weight: bold!important;
   background-color: #4373C0!important;
-  padding: 12px!important;
+  padding: 10px!important;
+  font-family: poppins-regular;
+  width: 100%;
+  margin-top: 18px;
   border-radius: 6px!important;
 }
 .google-btn
 {
+  width: 100%;
+  margin-top: 18px;
   border-radius: 7px!important;
   background-color: #ffffff!important;
   border-color: #CDCDCD!important;
   color: #000000!important;
+  font-family: poppins-regular;
   font-weight: bold!important;
-  font-size: 14px!important;
-  margin-right: 20px;
+  font-size: 11px!important;
   padding: 12px!important;
 }
 .fb-icon
 {
   color: #4373C0;
+  margin-top: 4px;
 }
 .fb-div
 {
@@ -96,8 +125,8 @@
   background-color: #ffffff;
   border-radius: 50%;
   display: inline-block;
-  width: 18px;
-  height: 18px; 
+  width: 13px;
+  height: 13px;
 }
 .gry
 {
@@ -106,6 +135,7 @@
 .org
 {
   color: #FF5A54; 
+  font-weight: bold;
 }
 .password-container
 {
@@ -113,22 +143,341 @@
 }
 .email-input
 {
-  width: 410px;
+  width: 100%;
   padding: 8px;
   border-radius: 6px;
   border: solid 2px #CDCDCD;
   margin-top: 5px;
+}
+.email-input:focus
+{
+  border: solid 2px #FF5A54; 
+}
+.password-input:focus
+{
+  border: solid 2px #FF5A54; 
 }
 .password-input
 {
   margin-top: 5px;
-  border-color: #CDCDCD;
   border-radius: 6px;
   padding: 8px;
   border: solid 2px #CDCDCD;
-  width: 410px;
+  width: 100%;
 }
 .line
 {
   margin-top: 200px;
+}
+.home-img
+{
+  height: auto;
+  max-width: 100%;
+}
+.agree-para
+{
+  font-size: 13px;
+  margin-top: 12px;
+  font-family: poppins-regular;
+}
+.register-btn
+{
+  background-color: #FF5A54!important;
+  border: none!important;
+  width: 100%;
+  padding: 10px!important;
+  border-radius: 7px!important;
+  font-family: poppins-regular;
+  font-size: 13px!important;
+  box-shadow: 0px 9px 20px 0px #ffa39a;
+}
+.email-container
+{
+  font-family: poppins-regular;
+  font-size: 13px;
+  position: relative;
+}
+.password-container
+{
+  font-family: poppins-regular;
+  font-size: 13px;
+  position: relative;
+}
+.email-icon
+{
+  padding: 15px!important;
+  position: absolute;
+  text-align: center;
+}
+.password-icon
+{  
+  position: absolute;
+  padding: 15px!important;
+  text-align: center;
+}
+
+/***********************************/
+
+.gry-container
+{
+  background: rgb(247,247,247);
+  background: linear-gradient(90deg, rgba(247,247,247,1) 0%, rgba(225,225,225,1) 100%);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: poppins-regular;
+}
+.gry1-container
+{
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 100%);
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.menubar
+{
+  font-size:12px;
+}
+.menubar1
+{
+  font-size:12px;
+  margin-right: 20px;
+  margin-top:20px;
+}
+.link-clr
+{
+  color: #ADADAD!important;
+}
+.menu-padding
+{
+  padding-left: 50px;
+  padding-right:50px;
+}
+.hr-top
+{
+  margin-top: 0px;
+  border: solid 0.1px #adadad;
+}
+.body-part
+{
+  padding-left: 50px;
+  padding-right:50px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.select-menu
+{
+  background-color: #FBFBFB!important;
+  border: none!important;
+  color: #ADADAD!important;
+  font-size: 12px!important;
+  padding-right: 20px!important;
+}
+.select-menu:focus
+{
+  box-shadow: none!important;
+}
+.black-para
+{
+  color: #000000;
+  font-size: 13px;
+  font-weight: bold;
+  margin-left: 25px;
+}
+.select-menu::after
+{
+  margin-left: 2.255em!important;
+  margin-top: 2px;
+}
+.border-right
+{
+  border-right: 1px solid #ADADAD;
+}
+.go-btn
+{
+  background-color: #F97071!important;
+  border: 0px!important;
+  font-size: 11px!important;
+  height: 39px;
+  margin-top: 10px;
+  padding-left: 17px!important;
+  padding-right: 17px!important;
+  border-radius: 7px!important;
+}
+.icon-search
+{
+  font-size: 9px!important;
+}
+.border-box
+{
+  display: flex;
+  border-radius: 10px;
+  padding-left: 7px;
+  padding-right: 7px;
+  box-shadow: 1px 1px 19px -5px #ADADAD;
+}
+.sort-btn
+{
+  background-color: #FBFBFB!important;
+  border: 0px!important;
+}
+.sort-btn:focus
+{
+  box-shadow: none!important;
+}
+.icon-slider
+{
+  color: #000000!important;
+}
+.filter-div
+{
+  border-right: 1px solid #ADADAD;
+  display: flex;
+  margin-right:10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.dropdown1
+{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-right: solid 0.1px #adadad;
+  padding-left: 5px;
+  padding-right: 8px;
+}
+.dropdown2
+{
+  padding-left: 5px;
+  padding-right: 8px;
+  border-right: solid 0.1px #adadad;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.dropdown3
+{
+  padding-left: 5px;
+  padding-right: 8px;
+  border-right: solid 0.1px #adadad;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.day-yr
+{
+  font-size: 15px;
+  margin-top: 10px;
+}
+.date
+{ 
+  font-size: 40px;
+  margin-left: 70px;
+}
+.weather
+{
+  display: flex;
+  margin-left: 30px;
+}
+.temp
+{
+  width:30%;
+  font-size: 40px;
+}
+.cloud-img
+{
+  width: 20%;
+  height: 15%;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+.city
+{
+  width: 30%;
+  margin-top: 10px;
+}
+.city-card
+{
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+.city-name
+{
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+.tour-date
+{
+  margin-bottom: 3px;
+  font-size: 12px;
+}
+.category
+{
+  font-size: 11px;
+  color: #ADADAD;
+}
+.avg-temp
+{
+  font-size: 12px;
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
+.city-temp
+{
+  font-size: 18px;
+  font-weight: bold;
+}
+.tl-price
+{
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  color: #ADADAD;
+}
+.price
+{
+  font-size: 18px;
+  font-weight: bold;
+}
+.city-img
+{
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+.border-bot
+{
+  border-bottom: 2px solid #000000;
+}
+.icon-bookmark
+{
+  float: right;
+}
+.explore-btn
+{
+  background-color: #ffffff!important;
+  border: 1px solid #ADADAD!important;
+  border-radius: 10px!important;
+  color: #000000!important;
+  font-size: 15px!important;
+  padding-left: 20px!important;
+  padding-top: 10px!important;
+  padding-bottom: 10px!important;
+  padding-right: 20px!important;
+  margin-top: 25px!important;
+  float: right;
+}
+.right-header
+{
+  display: flex;
+  float: right;
+  margin-right: 50px;
+}
+.icon-bookmark1
+{
+  margin-top: 20px!important;
 }
