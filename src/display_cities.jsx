@@ -7,13 +7,52 @@ import Logo from './Images/logo.png';
 import { Col } from 'react-bootstrap';
 import { Dropdown } from 'react-bootstrap';
 import Home from './Images/home.png'
-import Bahamas from './Images/bahamas.jfif';
-import Sun from './Images/sun.png';
-
+import CityCard from './city_card';
+import Avatar from './Images/avatar.jfif';
 
 class DisplayCities extends React.Component {
     constructor(props) {
         super(props);
+
+        var currentDate = new Date();
+        var date1 = currentDate.getDate();
+        var month1 = currentDate.getMonth();
+        var months = ["January", "February", "March", "April", "May", "June", "July", "Augest", "September", "October", "November", "December"];
+        var month2 = months[month1];
+
+        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var day1 = currentDate.getDay();
+
+        var day2 = days[day1];
+        var year1 = currentDate.getFullYear();
+
+        this.state = {
+            cityCardData: [
+                {
+                    cityName: "Bahamas Islands",
+                    tourDate: "24 April- 02 May, 2021",
+                    category: "Category/Ocean",
+                    temp: 18,
+                    cityImg: 'https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/1993/Suvadiva%20Dive%20Centre%203.jpg',
+                    price: "$2 950",
+                    isBookmark: false
+                },
+                {
+                    cityName: "Mykonos Island",
+                    tourDate: "18 April- 25 April, 2021",
+                    category: "Category/Europe Sea",
+                    temp: 26,
+                    cityImg: 'https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/1329/Iconic%20Christ%20Church%20in%20Shimla.jpg?crop=192:285&downsize=192:285',
+                    price: "$3 400",
+                    isBookmark: false
+                },
+            ],
+            date: date1,
+            month: month2,
+            day: day2,
+            year: year1
+        }
+
     }
 
     render() {
@@ -36,9 +75,11 @@ class DisplayCities extends React.Component {
                         </Col>
                         <Col lg={4} md={4} sm={4}>
                             <div className="right-header">
-                                <p className="menubar1">SAVED OFFERS</p>
+                                <p className="menubar1"><b>SAVED OFFERS</b></p>
                                 <i class="fa fa-bookmark-o icon-bookmark1" aria-hidden="true"></i>&#x2003;
-                                <i class="fa fa-bookmark-o icon-bookmark1" aria-hidden="true"></i>
+                                <div className="profile">
+                                    <img src={Avatar} className="avatar-img" alt="avatar.jfif" />
+                                </div>
                             </div>
                         </Col>
                         <hr className="hr-top" />
@@ -47,10 +88,10 @@ class DisplayCities extends React.Component {
                     <div className="body-part">
                         <Row>
                             <Col lg={1} md={1} sm={1}>
-                                <p className="date">16</p>
+                                <p className="date">{this.state.date}</p>
                             </Col>
                             <Col lg={2} md={2} sm={2}>
-                                <p className="day-yr"><b>Wendnesday</b><br /><span className="gry">September 2020</span></p>
+                                <p className="day-yr"><b>{this.state.day}</b><br /><span className="gry">{this.state.month}, {this.state.year}</span></p>
                             </Col>
                             <Col lg={6} md={6} sm={6}>
                                 <div className="border-box">
@@ -101,27 +142,14 @@ class DisplayCities extends React.Component {
                                 </div>
                             </Col>
                         </Row>
-
                         <Row>
-                            <Col lg={3} md={3} sm={3}>
-                                <div className="city-card">
-                                    <p className="city-name">Bahamas Islands <i class="fa fa-bookmark-o icon-bookmark" aria-hidden="true"></i></p>
-                                    <p className="tour-date">24 April-02 May, 2021</p>
-                                    <p className="category">Category/Ocean</p>
-                                    <p className="avg-temp"><span className="border-bot">Ave</span>rage Temperature</p>
-                                    <p className="city-temp">+ 18&#x00B0;C <img src={Sun} alt="" /></p>
-                                    <img src={Bahamas} className="city-img" alt="bahamas.jfif" />
-                                    <Row>
-                                        <Col lg={6} md={6} sm={6}>
-                                            <p className="tl-price">Total Price:</p>
-                                            <p className="price">$ 2 950</p>
-                                        </Col>
-                                        <Col lg={6} md={6} sm={6}>
-                                            <Button className="btn explore-btn">Explore</Button>
-                                        </Col>
-                                    </Row>
-                                </div>
-                            </Col>
+                            {
+                                this.state.cityCardData.map(card => {
+                                    return <Col lg={3} md={3} sm={3}>
+                                        < CityCard data={card} />
+                                    </Col>
+                                })
+                            }
                         </Row>
                     </div>
                 </div>

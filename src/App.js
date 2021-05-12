@@ -13,11 +13,11 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <div>
             <Switch>
-              <Route path="/signup" component={SignupPage} />
-              <Route path="/home" component={DisplayCities} />
+              <Route exact path="/" component={SignupPage} />
+              <Route exact path="/home" component={DisplayCities} />
             </Switch>
           </div>
         </BrowserRouter>

@@ -151,8 +151,18 @@
 }
 .email-input:focus
 {
-  border: solid 2px #FF5A54; 
+  border:  2px solid #FF5A54 !important; 
+  outline: none!important;
 }
+/* .email-div
+{
+  background-color: red;
+  padding:10px;
+  display: inline-block;
+  position: absolute;
+  top: 33px;
+  left: 20px;
+} */
 .password-input:focus
 {
   border: solid 2px #FF5A54; 
@@ -164,6 +174,11 @@
   padding: 8px;
   border: solid 2px #CDCDCD;
   width: 100%;
+}
+.password-input:focus
+{
+  border:  2px solid #FF5A54 !important; 
+  outline: none!important;
 }
 .line
 {
@@ -191,6 +206,7 @@
   font-size: 13px!important;
   box-shadow: 0px 9px 20px 0px #ffa39a;
 }
+
 .email-container
 {
   font-family: poppins-regular;
@@ -246,11 +262,18 @@
 {
   font-size:12px;
   margin-right: 20px;
-  margin-top:20px;
+  margin-top:28px;
 }
 .link-clr
 {
   color: #ADADAD!important;
+  padding: 20px!important;
+}
+.link-clr:focus
+{
+  color: #000000!important;
+  border-bottom: solid 2px red!important;
+  font-weight: bold !important;
 }
 .menu-padding
 {
@@ -259,7 +282,7 @@
 }
 .hr-top
 {
-  margin-top: 0px;
+  margin-top: -9px!important;
   border: solid 0.1px #adadad;
 }
 .body-part
@@ -271,7 +294,7 @@
 }
 .select-menu
 {
-  background-color: #FBFBFB!important;
+  background-color: #F7F7F7!important;
   border: none!important;
   color: #ADADAD!important;
   font-size: 12px!important;
@@ -322,7 +345,7 @@
 }
 .sort-btn
 {
-  background-color: #FBFBFB!important;
+  background-color: #F7F7F7!important;
   border: 0px!important;
 }
 .sort-btn:focus
@@ -463,13 +486,18 @@
   border: 1px solid #ADADAD!important;
   border-radius: 10px!important;
   color: #000000!important;
-  font-size: 15px!important;
+  font-size: 13px!important;
   padding-left: 20px!important;
   padding-top: 10px!important;
   padding-bottom: 10px!important;
   padding-right: 20px!important;
   margin-top: 25px!important;
   float: right;
+}
+.explore-btn:hover
+{
+  background-color: #000000!important;
+  color: #ffffff!important;
 }
 .right-header
 {
@@ -479,5 +507,20 @@
 }
 .icon-bookmark1
 {
-  margin-top: 20px!important;
+  margin-top: 28px!important;
+}
+.avatar-img
+{
+  border-radius:50px;
+  height: 30px;
+  width: 30px;
+  margin-top: -0.5px;
+  }
+.profile
+{
+  border-radius:50px;
+  height: 35px;
+  width: 35px;
+  margin-top: 17px;
+  border: 3px solid red;
 }

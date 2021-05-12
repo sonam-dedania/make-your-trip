@@ -47,7 +47,9 @@ class SignupPage extends React.Component {
                                 <Col lg={12} md={12} sm={12}>
                                     <div className="email-container">
                                         <label>Email address</label><br />
-                                        <i class="fa fa-envelope-o email-icon" aria-hidden="true"></i>
+                                        <div className="email-div">
+                                            <i class="fa fa-envelope-o email-icon" aria-hidden="true"></i>
+                                        </div>
                                         <input type="text" className="email-input" />
                                     </div>
                                 </Col>
