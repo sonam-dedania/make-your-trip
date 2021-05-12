@@ -6,6 +6,7 @@ import { Button } from 'react-bootstrap';
 import Google from './Images/google.png';
 import Home from './Images/home.svg';
 import 'font-awesome/css/font-awesome.min.css';
+import Logo from './logo';
 class SignupPage extends React.Component {
     constructor(props) {
         super(props);
@@ -17,7 +18,16 @@ class SignupPage extends React.Component {
                 <div className="inner-container">
                     <Row>
                         <Col lg={6} md={6} sm={6} className="left-col">
-                            <img src={Home} alt="home.svg" className="home-img" />
+                            <Row>
+                                <Col lg={12} md={12} sm={12}>
+                                    <Logo />
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col lg={12} md={12} sm={12}>
+                                    <img src={Home} alt="home.svg" className="home-img" />
+                                </Col>
+                            </Row>
                         </Col>
                         <Col lg={6} md={6} sm={6} className="right-col">
                             <Row>
@@ -76,7 +86,7 @@ class SignupPage extends React.Component {
                         </Col>
                     </Row>
                 </div>
-            </div>
+            </div >
 
         )
     }

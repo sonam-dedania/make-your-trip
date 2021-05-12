@@ -4,11 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import { Navbar, Nav, Row, Button } from 'react-bootstrap';
 import Logo from './Images/logo.png';
+import Logo1 from './logo';
 import { Col } from 'react-bootstrap';
 import { Dropdown } from 'react-bootstrap';
-import Home from './Images/home.png'
+import Cloud from './Images/cloud.png'
 import CityCard from './city_card';
 import Avatar from './Images/avatar.jfif';
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
 
 class DisplayCities extends React.Component {
     constructor(props) {
@@ -63,12 +66,12 @@ class DisplayCities extends React.Component {
                         <Col lg={8} md={8} sm={8}>
                             <div className="header">
                                 <Navbar className="menu-padding">
-                                    <img src={Logo} alt="logo.png" />
-                                    <Nav className="mr-auto menubar">
-                                        <Nav.Link href="#home" className="link-clr">HOME</Nav.Link>
-                                        <Nav.Link href="#search" className="link-clr">SEARCH</Nav.Link>
-                                        <Nav.Link href="#tours" className="link-clr">TOURS 2021</Nav.Link>
-                                        <Nav.Link href="#hot deals" className="link-clr">HOT DEALS</Nav.Link>
+                                    <Logo1 />
+                                    <Nav className="mr-auto menubar" variant="tabs" defaultActiveKey="home">
+                                        <Nav.Link href="#home" eventKey="home" className="link-clr">HOME</Nav.Link>
+                                        <Nav.Link href="#search" eventKey="search" className="link-clr">SEARCH</Nav.Link>
+                                        <Nav.Link href="#tours" eventKey="tours" className="link-clr">TOURS 2021</Nav.Link>
+                                        <Nav.Link href="#hot deals" eventKey="hot deals" className="link-clr">HOT DEALS</Nav.Link>
                                     </Nav>
                                 </Navbar>
                             </div>
@@ -111,10 +114,10 @@ class DisplayCities extends React.Component {
                                             How Many Days?<br />
                                             <span className="black-para">One Week</span>
                                         </Dropdown.Toggle>
-                                        <Dropdown.Menu>
-                                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                        <Dropdown.Menu className="dropdown-items">
+                                            <Dropdown.Item href="#/action-1">4 Nights / 5 days</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-2">8 Nights / 10 days</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-3">10 Nights / 11 days</Dropdown.Item>
                                         </Dropdown.Menu>
                                     </Dropdown>
                                     <Dropdown className="dropdown3">
@@ -123,9 +126,7 @@ class DisplayCities extends React.Component {
                                             <span className="black-para">Any Date</span>
                                         </Dropdown.Toggle>
                                         <Dropdown.Menu>
-                                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                            <DatePicker />
                                         </Dropdown.Menu>
                                     </Dropdown>
                                     <div className="filter-div">
@@ -136,7 +137,7 @@ class DisplayCities extends React.Component {
                             </Col>
                             <Col lg={3} md={3} sm={3}>
                                 <div className="weather">
-                                    <img src={Home} alt="home.png" className="cloud-img" />
+                                    <img src={Cloud} alt="cloud.png" className="cloud-img" />
                                     <p className="temp">23&#x00B0;</p>
                                     <p className="city"><b>Kiev</b><br /><span className="gry">Ukraine</span></p>
                                 </div>

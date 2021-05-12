@@ -46,7 +46,10 @@
   font-family: poppins-regular;
   src: url(Fonts/Poppins-Regular.ttf);
 }
-
+@font-face {
+  font-family: Dynalight-Regular;
+  src: url(Fonts/Dynalight-Regular.ttf);
+}
 .outer-container{
   background-color: #FF5A54;
   margin: 20px;
@@ -188,6 +191,7 @@
 {
   height: auto;
   max-width: 100%;
+  margin-top: 50px;
 }
 .agree-para
 {
@@ -242,7 +246,6 @@
   padding-bottom: 40px;
   padding-left: 30px;
   padding-right: 30px;
-  font-family: poppins-regular;
 }
 .gry1-container
 {
@@ -257,6 +260,8 @@
 .menubar
 {
   font-size:12px;
+  font-family: poppins-regular;
+  margin-left: 160px;
 }
 .menubar1
 {
@@ -291,6 +296,7 @@
   padding-right:50px;
   padding-top: 40px;
   padding-bottom: 40px;
+  font-family: poppins-regular;
 }
 .select-menu
 {
@@ -388,6 +394,10 @@
   padding-top: 5px;
   padding-bottom: 5px;
 }
+.dropdown-items
+{
+  font-size: 15px!important;
+}
 .day-yr
 {
   font-size: 15px;
@@ -410,7 +420,7 @@
 }
 .cloud-img
 {
-  width: 20%;
+  width: 15%;
   height: 15%;
   margin-top: 10px;
   margin-right: 20px;
@@ -504,6 +514,7 @@
   display: flex;
   float: right;
   margin-right: 50px;
+  font-family: poppins-regular;
 }
 .icon-bookmark1
 {
@@ -523,4 +534,38 @@
   width: 35px;
   margin-top: 17px;
   border: 3px solid red;
+}
+.trip-logo
+{
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: -50px;
+  margin-top: -30px;
+}
+.your-word
+{
+  display: inline;
+  position: absolute;
+  color: #1d057b;
+}
+.your
+{
+  font-family: Dynalight-Regular;
+  font-size: 40px;
+  font-weight: normal;
+  color: #ffffff;
+}
+.style-div
+{
+  display: inline-block;
+  background-color: #EB2226;
+  border-radius: 10px;
+  height: 44px;
+  width: 62px;
+  position: relative;
+  left: 114px;
+  color: #1d057b;
+  top: 13px;
 }
