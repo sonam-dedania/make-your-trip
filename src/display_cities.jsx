@@ -7,10 +7,11 @@ import Logo from './Images/logo.png';
 import Logo1 from './logo';
 import { Col } from 'react-bootstrap';
 import { Dropdown } from 'react-bootstrap';
-import Cloud from './Images/cloud.png'
 import CityCard from './city_card';
 import Avatar from './Images/avatar.jfif';
 import DatePicker from 'react-datepicker';
+import CitiesWeather from './cities_weather';
+import CityList from './city_list';
 import "react-datepicker/dist/react-datepicker.css";
 
 class DisplayCities extends React.Component {
@@ -67,8 +68,8 @@ class DisplayCities extends React.Component {
                             <div className="header">
                                 <Navbar className="menu-padding">
                                     <Logo1 />
-                                    <Nav className="mr-auto menubar" variant="tabs" defaultActiveKey="home">
-                                        <Nav.Link href="#home" eventKey="home" className="link-clr">HOME</Nav.Link>
+                                    <Nav className="mr-auto menubar" variant="tabs" activeKey="#home">
+                                        <Nav.Link href="#home" eventKey="home" className="link-clr active">HOME</Nav.Link>
                                         <Nav.Link href="#search" eventKey="search" className="link-clr">SEARCH</Nav.Link>
                                         <Nav.Link href="#tours" eventKey="tours" className="link-clr">TOURS 2021</Nav.Link>
                                         <Nav.Link href="#hot deals" eventKey="hot deals" className="link-clr">HOT DEALS</Nav.Link>
@@ -96,7 +97,7 @@ class DisplayCities extends React.Component {
                             <Col lg={2} md={2} sm={2}>
                                 <p className="day-yr"><b>{this.state.day}</b><br /><span className="gry">{this.state.month}, {this.state.year}</span></p>
                             </Col>
-                            <Col lg={6} md={6} sm={6}>
+                            <Col lg={6} md={6} sm={6} className="align-left">
                                 <div className="border-box">
                                     <Dropdown className="dropdown1">
                                         <Dropdown.Toggle id="dropdown-basic" className="select-menu">
@@ -104,9 +105,7 @@ class DisplayCities extends React.Component {
                                             <span className="black-para">All Places</span>
                                         </Dropdown.Toggle>
                                         <Dropdown.Menu>
-                                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                            <CityList />
                                         </Dropdown.Menu>
                                     </Dropdown>
                                     <Dropdown className="dropdown2">
@@ -120,15 +119,12 @@ class DisplayCities extends React.Component {
                                             <Dropdown.Item href="#/action-3">10 Nights / 11 days</Dropdown.Item>
                                         </Dropdown.Menu>
                                     </Dropdown>
-                                    <Dropdown className="dropdown3">
-                                        <Dropdown.Toggle id="dropdown-basic" className="select-menu">
-                                            Select Date<br />
-                                            <span className="black-para">Any Date</span>
-                                        </Dropdown.Toggle>
-                                        <Dropdown.Menu>
-                                            <DatePicker />
-                                        </Dropdown.Menu>
-                                    </Dropdown>
+                                    <div className="border-right1">
+                                        <div className="any-date">
+                                            <p className="select-date1">Select Date</p><br /><p className="any-date-para">Any date <i class="fa fa-sort-desc icon-sort" aria-hidden="true"></i></p>
+                                        </div>
+                                        <DatePicker className="datepicker" />
+                                    </div>
                                     <div className="filter-div">
                                         <Button className="btn sort-btn"><i class="fa fa-sliders icon-slider" aria-hidden="true"></i></Button>
                                     </div>
@@ -136,11 +132,7 @@ class DisplayCities extends React.Component {
                                 </div>
                             </Col>
                             <Col lg={3} md={3} sm={3}>
-                                <div className="weather">
-                                    <img src={Cloud} alt="cloud.png" className="cloud-img" />
-                                    <p className="temp">23&#x00B0;</p>
-                                    <p className="city"><b>Kiev</b><br /><span className="gry">Ukraine</span></p>
-                                </div>
+                                <CitiesWeather />
                             </Col>
                         </Row>
                         <Row>
@@ -153,8 +145,8 @@ class DisplayCities extends React.Component {
                             }
                         </Row>
                     </div>
-                </div>
-            </div>
+                </div >
+            </div >
         )
     }
 }

@@ -17,9 +17,9 @@ class SignupPage extends React.Component {
             <div className="outer-container">
                 <div className="inner-container">
                     <Row>
-                        <Col lg={6} md={6} sm={6} className="left-col">
+                        <Col lg={6} md={6} sm={12} className="left-col .d-none .d-sm-block">
                             <Row>
-                                <Col lg={12} md={12} sm={12}>
+                                <Col lg={12} md={12} sm={12} className="">
                                     <Logo />
                                 </Col>
                             </Row>
@@ -29,7 +29,7 @@ class SignupPage extends React.Component {
                                 </Col>
                             </Row>
                         </Col>
-                        <Col lg={6} md={6} sm={6} className="right-col">
+                        <Col lg={6} md={6} sm={12} className="right-col">
                             <Row>
                                 <Col lg={12} md={12} sm={12}>
                                     <h3 className="h3-header"><b>Get's started.</b></h3>

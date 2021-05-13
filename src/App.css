@@ -159,13 +159,14 @@
 }
 /* .email-div
 {
-  background-color: red;
-  padding:10px;
-  display: inline-block;
+  width: 30px;
+  height: 39px;
+  background-color: #fff !important;
   position: absolute;
-  top: 33px;
-  left: 20px;
-} */
+  top: 24px;
+  border: solid 2px #CDCDCD;
+  border-radius: 6px;
+}  */
 .password-input:focus
 {
   border: solid 2px #FF5A54; 
@@ -274,10 +275,18 @@
   color: #ADADAD!important;
   padding: 20px!important;
 }
+ .link-clr.active
+{
+  border: 1px solid transparent !important;
+  border-bottom: 2px solid red !important;
+  background-color: #f6f6f6!important;
+  font-weight: bold !important;
+  color: #000000!important;
+  } 
 .link-clr:focus
 {
-  color: #000000!important;
   border-bottom: solid 2px red!important;
+  color: #000000!important;
   font-weight: bold !important;
 }
 .menu-padding
@@ -297,6 +306,33 @@
   padding-top: 40px;
   padding-bottom: 40px;
   font-family: poppins-regular;
+}
+.select-date
+{
+  color: #ADADAD!important;
+  font-size: 12px!important;
+  margin-left: 30px;
+}
+.any-date
+{
+  position: absolute;
+  left: 740px;
+  top: 214px;
+  z-index: 1;
+ 
+}
+.select-date1
+{
+  margin-top: -18px;
+  color: #ADADAD!important;
+  font-size: 12px!important;
+}
+.any-date-para
+{
+  margin-top: -40px;
+  font-size: 13px!important;
+  color:#000000;
+  font-weight: bold;
 }
 .select-menu
 {
@@ -325,6 +361,11 @@
 .border-right
 {
   border-right: 1px solid #ADADAD;
+}
+.border-right1
+{
+  border-right: 1px solid #ADADAD;
+  width: 165px;
 }
 .go-btn
 {
@@ -402,11 +443,16 @@
 {
   font-size: 15px;
   margin-top: 10px;
+  margin-left: -50px;
+}
+.align-left
+{
+  margin-left: -81px;
 }
 .date
 { 
   font-size: 40px;
-  margin-left: 70px;
+  margin-left: 18px;
 }
 .weather
 {
@@ -417,6 +463,7 @@
 {
   width:30%;
   font-size: 40px;
+  margin-left: 14px;
 }
 .cloud-img
 {
@@ -424,11 +471,17 @@
   height: 15%;
   margin-top: 10px;
   margin-right: 20px;
+  margin-left: 20px;
+}
+.degree
+{
+  font-size: 20px;
 }
 .city
 {
   width: 30%;
   margin-top: 10px;
+  margin-left: 65px;
 }
 .city-card
 {
@@ -568,4 +621,27 @@
   left: 114px;
   color: #1d057b;
   top: 13px;
+}
+.datepicker
+{
+  border: none;
+  background-color: #F7F7F7;
+  width: 100%;
+  position: relative;
+  margin-top: 23px;
+  margin-left: 0px;
+  display: inline-block;
+  height: 36px;
+}
+.datepicker:focus
+{
+  cursor: none!important;
+  outline: none!important;
+  color: transparent;
+}
+.icon-sort
+{
+  margin-left: 26px;
+  color: #ADADAD!important;
+  font-size: 10px!important;
 }
