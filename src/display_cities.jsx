@@ -54,9 +54,13 @@ class DisplayCities extends React.Component {
             date: date1,
             month: month2,
             day: day2,
-            year: year1
+            year: year1,
+            startDate: null
         }
+    }
 
+    changeDate = (date) => {
+        this.setState({ startDate: date });
     }
 
     render() {
@@ -95,19 +99,17 @@ class DisplayCities extends React.Component {
                                 <p className="date">{this.state.date}</p>
                             </Col>
                             <Col lg={2} md={2} sm={2}>
-                                <p className="day-yr"><b>{this.state.day}</b><br /><span className="gry">{this.state.month}, {this.state.year}</span></p>
+                                <p className="day-yr"><b>{this.state.day}</b><br />
+                                    <span className="gry">{this.state.month}, {this.state.year}</span></p>
                             </Col>
                             <Col lg={6} md={6} sm={6} className="align-left">
                                 <div className="border-box">
-                                    <Dropdown className="dropdown1">
-                                        <Dropdown.Toggle id="dropdown-basic" className="select-menu">
-                                            Select Place<br />
-                                            <span className="black-para">All Places</span>
-                                        </Dropdown.Toggle>
-                                        <Dropdown.Menu>
-                                            <CityList />
-                                        </Dropdown.Menu>
-                                    </Dropdown>
+                                    <div className="select-dropdown">
+                                        <p className="all-place-para">Select Place</p>
+                                        <div className="city-list">
+                                            <CityList /><i class="fa fa-sort-desc icon-sort1" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
                                     <Dropdown className="dropdown2">
                                         <Dropdown.Toggle id="dropdown-basic" className="select-menu">
                                             How Many Days?<br />
@@ -121,9 +123,18 @@ class DisplayCities extends React.Component {
                                     </Dropdown>
                                     <div className="border-right1">
                                         <div className="any-date">
-                                            <p className="select-date1">Select Date</p><br /><p className="any-date-para">Any date <i class="fa fa-sort-desc icon-sort" aria-hidden="true"></i></p>
+                                            <p className="select-date1">Select Date</p><br />
+                                            {!this.state.startDate &&
+                                                <p className="any-date-para">Any date
+                                                <i class="fa fa-sort-desc icon-sort" aria-hidden="true"></i>
+                                                </p>
+                                            }
                                         </div>
-                                        <DatePicker className="datepicker" />
+                                        <DatePicker
+                                            className="datepicker"
+                                            placeholder="sonam"
+                                            selected={this.state.startDate}
+                                            onChange={this.changeDate} />
                                     </div>
                                     <div className="filter-div">
                                         <Button className="btn sort-btn"><i class="fa fa-sliders icon-slider" aria-hidden="true"></i></Button>

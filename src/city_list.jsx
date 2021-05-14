@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
 import { Dropdown } from 'react-bootstrap';
+import './select_search_style.css';
+import fuzzySearch from './fuzzySearch';
+import SelectSearch from 'react-select-search';
 
 class CityList extends React.Component {
     constructor(props) {
@@ -12,16 +15,22 @@ class CityList extends React.Component {
         fetch("https://raw.githubusercontent.com/Dipen-Dedania/static-data/main/india-popular-city.json").then(function (response) {
             return response.json();
         }).then((result) => {
+            console.log('result city: ', result);
+            result.city.map((city) => {
+                city.value = city.name;
+            });
             this.setState({ cities: result.city });
         });
     }
 
     render() {
         return (
-            this.state.cities.map((city, index) => {
-                return <Dropdown.Item href="#/action-1">{city.name}</Dropdown.Item>
-            }
-            )
+            <SelectSearch
+                options={this.state.cities}
+                search
+                filterOptions={fuzzySearch}
+                placeholder="All Places"
+            />
         )
     }
 }

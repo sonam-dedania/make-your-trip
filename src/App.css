@@ -625,19 +625,21 @@
 .datepicker
 {
   border: none;
-  background-color: #F7F7F7;
-  width: 100%;
+  background-color: transparent;
+  width: 80%;
   position: relative;
   margin-top: 23px;
-  margin-left: 0px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-left: 30px;
   display: inline-block;
   height: 36px;
+  z-index: 5;
 }
 .datepicker:focus
 {
   cursor: none!important;
   outline: none!important;
-  color: transparent;
 }
 .icon-sort
 {
@@ -645,3 +647,36 @@
   color: #ADADAD!important;
   font-size: 10px!important;
 }
+.all-place-para
+{
+  margin-top: 12px;
+  margin-left: 24px;
+  color: #ADADAD!important;
+  font-size: 12px!important;
+}
+.select-place-para
+{
+  margin-top: -40px;
+  font-size: 13px!important;
+  color:#000000;
+  font-weight: bold;
+}
+.select-dropdown
+{
+  display: inline-block;
+  border-right: 1px solid #ADADAD;
+  padding-right: 20px;
+}
+.city-list
+{
+  display: flex;
+  margin-left: 10px;
+}
+.icon-sort1
+{
+  margin-left: -25px;
+  margin-top: -14px;
+  color: #ADADAD!important;
+  font-size: 10px!important;
+}
+
