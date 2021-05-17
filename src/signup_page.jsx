@@ -7,7 +7,7 @@ import Google from './Images/google.png';
 import Home from './Images/home.svg';
 import 'font-awesome/css/font-awesome.min.css';
 import Logo from './logo';
-import { Link } from 'react-router-dom';
+import { reactLocalStorage } from 'reactjs-localstorage';
 class SignupPage extends React.Component {
     constructor(props) {
         super(props);
@@ -19,13 +19,26 @@ class SignupPage extends React.Component {
     }
 
     buttonClicked = () => {
+        let isLoggedIn = false;
         if (this.state.email === "hello@hello.com" && this.state.password === "hello123#") {
+            isLoggedIn = true;
             window.open("/home", "_self");
+            reactLocalStorage.set("logindetail", isLoggedIn);
             this.state.email = "";
             this.state.password = "";
         }
         else {
             this.setState({ errormsg: "Please enter valid details" });
+            this.state.email = "";
+            this.state.password = "";
+        }
+    }
+
+    componentDidMount = () => {
+        let l = reactLocalStorage.get("logindetail");
+        console.log("localstorage data", l);
+        if (l === "true") {
+            window.open("/home", "_self");
         }
     }
 
@@ -109,5 +122,6 @@ class SignupPage extends React.Component {
         )
     }
 }
+
 
 export default SignupPage;
