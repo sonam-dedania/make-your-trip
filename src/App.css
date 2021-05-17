@@ -147,7 +147,7 @@
 .email-input
 {
   width: 100%;
-  padding: 8px;
+  padding: 9px 15px 10px 40px;
   border-radius: 6px;
   border: solid 2px #CDCDCD;
   margin-top: 5px;
@@ -175,7 +175,7 @@
 {
   margin-top: 5px;
   border-radius: 6px;
-  padding: 8px;
+  padding: 9px 15px 10px 40px;
   border: solid 2px #CDCDCD;
   width: 100%;
 }
@@ -226,14 +226,14 @@
 }
 .email-icon
 {
-  padding: 15px!important;
+  padding: 19px!important;
   position: absolute;
   text-align: center;
 }
 .password-icon
 {  
   position: absolute;
-  padding: 15px!important;
+  padding: 19px!important;
   text-align: center;
 }
 
@@ -421,12 +421,45 @@
 }
 .dropdown2
 {
-  padding-left: 5px;
+  padding-left: 10px;
   padding-right: 8px;
-  border-right: solid 0.1px #adadad;
   padding-top: 5px;
   padding-bottom: 5px;
+  background-color: transparent!important;
 }
+
+.days-dropdown button
+{
+  background-color: transparent!important;
+  border-color: transparent!important;
+  color: #000000!important;
+  font-size: 13px!important;
+  font-weight: bold !important;
+  margin-left: 25px;
+  margin-top: -40px;
+  padding: 0 !important;
+}
+.errormsg
+{
+  color: red;
+  font-weight: bold;
+  margin-top: 20px;
+  font-family: poppins-regular;
+  font-size: 15px;
+}
+.days-dropdown button:focus
+{
+  box-shadow: none!important;
+}
+.days-dropdown
+{
+  margin-bottom: -100px !important;
+}
+.days-dropdown button::after
+{
+  border: 0px!important;
+}
+
 .dropdown3
 {
   padding-left: 5px;
@@ -676,6 +709,13 @@
 {
   margin-left: -25px;
   margin-top: -14px;
+  color: #ADADAD!important;
+  font-size: 10px!important;
+}
+.icon-sort2
+{
+  margin-left: 140px;
+  margin-top: 63px;
   color: #ADADAD!important;
   font-size: 10px!important;
 }

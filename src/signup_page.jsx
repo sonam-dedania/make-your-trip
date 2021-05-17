@@ -7,9 +7,26 @@ import Google from './Images/google.png';
 import Home from './Images/home.svg';
 import 'font-awesome/css/font-awesome.min.css';
 import Logo from './logo';
+import { Link } from 'react-router-dom';
 class SignupPage extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            email: "",
+            password: "",
+            errormsg: ""
+        };
+    }
+
+    buttonClicked = () => {
+        if (this.state.email === "hello@hello.com" && this.state.password === "hello123#") {
+            window.open("/home", "_self");
+            this.state.email = "";
+            this.state.password = "";
+        }
+        else {
+            this.setState({ errormsg: "Please enter valid details" });
+        }
     }
 
     render() {
@@ -19,7 +36,7 @@ class SignupPage extends React.Component {
                     <Row>
                         <Col lg={6} md={6} sm={12} className="left-col .d-none .d-sm-block">
                             <Row>
-                                <Col lg={12} md={12} sm={12} className="">
+                                <Col lg={12} md={12} sm={12}>
                                     <Logo />
                                 </Col>
                             </Row>
@@ -60,7 +77,7 @@ class SignupPage extends React.Component {
                                         <div className="email-div">
                                             <i class="fa fa-envelope-o email-icon" aria-hidden="true"></i>
                                         </div>
-                                        <input type="text" className="email-input" />
+                                        <input type="text" id="email" value={this.state.email} className="email-input" onChange={(e) => this.setState({ email: e.target.value })} />
                                     </div>
                                 </Col>
                             </Row>
@@ -69,7 +86,7 @@ class SignupPage extends React.Component {
                                     <div className="password-container">
                                         <label>Password</label><br />
                                         <i class="fa fa-lock password-icon" aria-hidden="true"></i>
-                                        <input type="password" className="password-input" />
+                                        <input type="password" id="password" value={this.state.password} className="password-input" onChange={(e) => this.setState({ password: e.target.value })} />
                                     </div>
                                 </Col>
                             </Row>
@@ -80,9 +97,10 @@ class SignupPage extends React.Component {
                             </Row>
                             <Row>
                                 <Col lg={12} md={12} sm={12}>
-                                    <Button className="btn register-btn">Register</Button>
+                                    <Button className="btn register-btn" onClick={this.buttonClicked}>Login</Button>
                                 </Col>
                             </Row>
+                            <div className="errormsg">{this.state.errormsg}</div>
                         </Col>
                     </Row>
                 </div>

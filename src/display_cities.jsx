@@ -6,11 +6,11 @@ import { Navbar, Nav, Row, Button } from 'react-bootstrap';
 import Logo from './Images/logo.png';
 import Logo1 from './logo';
 import { Col } from 'react-bootstrap';
-import { Dropdown } from 'react-bootstrap';
 import CityCard from './city_card';
 import Avatar from './Images/avatar.jfif';
 import DatePicker from 'react-datepicker';
 import CitiesWeather from './cities_weather';
+import TourDaysList from './tour_days_list';
 import CityList from './city_list';
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -55,13 +55,15 @@ class DisplayCities extends React.Component {
             month: month2,
             day: day2,
             year: year1,
-            startDate: null
+            startDate: null,
         }
     }
 
     changeDate = (date) => {
         this.setState({ startDate: date });
     }
+
+
 
     render() {
         return (
@@ -110,17 +112,10 @@ class DisplayCities extends React.Component {
                                             <CityList /><i class="fa fa-sort-desc icon-sort1" aria-hidden="true"></i>
                                         </div>
                                     </div>
-                                    <Dropdown className="dropdown2">
-                                        <Dropdown.Toggle id="dropdown-basic" className="select-menu">
-                                            How Many Days?<br />
-                                            <span className="black-para">One Week</span>
-                                        </Dropdown.Toggle>
-                                        <Dropdown.Menu className="dropdown-items">
-                                            <Dropdown.Item href="#/action-1">4 Nights / 5 days</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-2">8 Nights / 10 days</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-3">10 Nights / 11 days</Dropdown.Item>
-                                        </Dropdown.Menu>
-                                    </Dropdown>
+                                    <div className="select-dropdown">
+                                        <p className="all-place-para">How Many Days?</p>
+                                        <TourDaysList /><i class="fa fa-sort-desc icon-sort2" aria-hidden="true"></i>
+                                    </div>
                                     <div className="border-right1">
                                         <div className="any-date">
                                             <p className="select-date1">Select Date</p><br />
@@ -132,7 +127,6 @@ class DisplayCities extends React.Component {
                                         </div>
                                         <DatePicker
                                             className="datepicker"
-                                            placeholder="sonam"
                                             selected={this.state.startDate}
                                             onChange={this.changeDate} />
                                     </div>
