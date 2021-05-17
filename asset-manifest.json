@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/make-your-trip/static/css/main.01539bc4.chunk.css",
-    "main.js": "/make-your-trip/static/js/main.1278c3d6.chunk.js",
-    "main.js.map": "/make-your-trip/static/js/main.1278c3d6.chunk.js.map",
+    "main.js": "/make-your-trip/static/js/main.986eccad.chunk.js",
+    "main.js.map": "/make-your-trip/static/js/main.986eccad.chunk.js.map",
     "runtime-main.js": "/make-your-trip/static/js/runtime-main.e16b9828.js",
     "runtime-main.js.map": "/make-your-trip/static/js/runtime-main.e16b9828.js.map",
     "static/css/2.7b4aaee7.chunk.css": "/make-your-trip/static/css/2.7b4aaee7.chunk.css",
@@ -25,6 +25,6 @@
     "static/css/2.7b4aaee7.chunk.css",
     "static/js/2.529cc2b4.chunk.js",
     "static/css/main.01539bc4.chunk.css",
-    "static/js/main.1278c3d6.chunk.js"
+    "static/js/main.986eccad.chunk.js"
   ]
 }
