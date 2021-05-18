@@ -5,10 +5,12 @@ import 'font-awesome/css/font-awesome.min.css';
 import { Navbar, Nav, Row, Button } from 'react-bootstrap';
 import Logo from './Images/logo.png';
 import Logo1 from './logo';
+import { Dropdown, DropdownButton } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import CityCard from './city_card';
 import Avatar from './Images/avatar.jfif';
 import DatePicker from 'react-datepicker';
+import { reactLocalStorage } from 'reactjs-localstorage';
 import CitiesWeather from './cities_weather';
 import TourDaysList from './tour_days_list';
 import CityList from './city_list';
@@ -63,6 +65,9 @@ class DisplayCities extends React.Component {
         this.setState({ startDate: date });
     }
 
+    handleSelect = () => {
+        reactLocalStorage.clear("logindetail");
+    }
 
 
     render() {
@@ -87,9 +92,14 @@ class DisplayCities extends React.Component {
                             <div className="right-header">
                                 <p className="menubar1"><b>SAVED OFFERS</b></p>
                                 <i class="fa fa-bookmark-o icon-bookmark1" aria-hidden="true"></i>&#x2003;
+
                                 <div className="profile">
                                     <img src={Avatar} className="avatar-img" alt="avatar.jfif" />
+                                    <DropdownButton onSelect={this.handleSelect} className="profile-logout">
+                                        <Dropdown.Item href="/make-your-trip" eventKey='Logout'>Logout</Dropdown.Item>
+                                    </DropdownButton>
                                 </div>
+
                             </div>
                         </Col>
                         <hr className="hr-top" />

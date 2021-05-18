@@ -620,6 +620,7 @@
   width: 35px;
   margin-top: 17px;
   border: 3px solid red;
+  position: relative;
 }
 .trip-logo
 {
@@ -719,4 +720,26 @@
   color: #ADADAD!important;
   font-size: 10px!important;
 }
-
+.profile-logout button
+{
+  border-radius: 50px!important;
+  height: 32px;
+  width: 32px;
+  margin-top: -57px;
+  margin-left: -3px;
+  background-color: transparent!important;
+  border: none!important;
+}
+.profile-logout button::after
+{
+  border: none!important;
+}
+.profile-logout button:focus
+{
+  box-shadow: none!important;
+}
+.profile-logout .dropdown-menu
+{
+  padding: 0.5px !important;
+  font-size: 14px !important;
+}
