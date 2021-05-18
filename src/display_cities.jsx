@@ -33,31 +33,12 @@ class DisplayCities extends React.Component {
         var year1 = currentDate.getFullYear();
 
         this.state = {
-            cityCardData: [
-                {
-                    cityName: "Bahamas Islands",
-                    tourDate: "24 April- 02 May, 2021",
-                    category: "Category/Ocean",
-                    temp: 18,
-                    cityImg: 'https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/1993/Suvadiva%20Dive%20Centre%203.jpg',
-                    price: "$2 950",
-                    isBookmark: false
-                },
-                {
-                    cityName: "Mykonos Island",
-                    tourDate: "18 April- 25 April, 2021",
-                    category: "Category/Europe Sea",
-                    temp: 26,
-                    cityImg: 'https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/1329/Iconic%20Christ%20Church%20in%20Shimla.jpg?crop=192:285&downsize=192:285',
-                    price: "$3 400",
-                    isBookmark: false
-                },
-            ],
             date: date1,
             month: month2,
             day: day2,
             year: year1,
             startDate: null,
+            selectedCity: ""
         }
     }
 
@@ -69,6 +50,9 @@ class DisplayCities extends React.Component {
         reactLocalStorage.clear("logindetail");
     }
 
+    selectedValue = (e) => {
+        this.setState({ selectedCity: e });
+    }
 
     render() {
         return (
@@ -107,19 +91,19 @@ class DisplayCities extends React.Component {
 
                     <div className="body-part">
                         <Row>
-                            <Col lg={1} md={1} sm={1}>
-                                <p className="date">{this.state.date}</p>
-                            </Col>
-                            <Col lg={2} md={2} sm={2}>
-                                <p className="day-yr"><b>{this.state.day}</b><br />
-                                    <span className="gry">{this.state.month}, {this.state.year}</span></p>
+                            <Col lg={3} md={3} sm={3}>
+                                <div className="date">{this.state.date}</div>
+                                <div className="d-m-y">
+                                    <div className="day-yr"><b>{this.state.day}</b></div><br />
+                                    <div className="month gry">{this.state.month}, {this.state.year}</div>
+                                </div>
                             </Col>
                             <Col lg={6} md={6} sm={6} className="align-left">
                                 <div className="border-box">
                                     <div className="select-dropdown">
                                         <p className="all-place-para">Select Place</p>
                                         <div className="city-list">
-                                            <CityList /><i class="fa fa-sort-desc icon-sort1" aria-hidden="true"></i>
+                                            <CityList selectedValue={this.selectedValue} /><i class="fa fa-sort-desc icon-sort1" aria-hidden="true"></i>
                                         </div>
                                     </div>
                                     <div className="select-dropdown">
@@ -147,7 +131,7 @@ class DisplayCities extends React.Component {
                                 </div>
                             </Col>
                             <Col lg={3} md={3} sm={3}>
-                                <CitiesWeather />
+                                <CitiesWeather selectedCity={this.state.selectedCity} />
                             </Col>
                         </Row>
                         <Row>

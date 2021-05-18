@@ -12,8 +12,23 @@ class CitiesWeather extends React.Component {
         };
     }
 
-    componentDidMount = () => {
-        fetch("https://api.openweathermap.org/data/2.5/weather?q=ahmedabad&units=metric&appid=9d9e2ade1df4e355834f9bd8a503dedf").then(function (response) {
+    componentDidMount() {
+        this.fetchData("");
+    }
+
+    componentDidUpdate = (prevProps) => {
+        console.log("componentDidUpdate");
+        if (this.props.selectedCity !== prevProps.selectedCity) {
+            this.fetchData(this.props.selectedCity);
+        }
+    }
+
+
+    fetchData = (cityData) => {
+
+        let citySelected = (cityData === "") ? "ahmedabad" : cityData;
+
+        fetch("https://api.openweathermap.org/data/2.5/weather?q=" + citySelected + "&units=metric&appid=9d9e2ade1df4e355834f9bd8a503dedf").then(function (response) {
             return response.json();
         }).then((result) => {
             this.setState({ temp: result.main.temp, city: result.name, country: result.sys.country });
@@ -24,8 +39,8 @@ class CitiesWeather extends React.Component {
         return (
             <div className="weather">
                 <img src={Cloud} alt="cloud.png" className="cloud-img" />
-                <p className="temp">{this.state.temp}&#x00B0;</p>
-                <p className="city"><b>{this.state.city}</b><br /><span className="gry">{this.state.country}</span></p>
+                <div className="temp">{this.state.temp}&#x00B0;</div>
+                <div className="city"><b>{this.state.city}</b><br /><span className="gry">{this.state.country}</span></div>
             </div>
         );
     }

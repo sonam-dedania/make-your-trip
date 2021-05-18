@@ -27,7 +27,7 @@ class CityCard extends React.Component {
             this.state.cityDetails.map((cityInfo) => {
                 return <Col lg={3} md={3} sm={3}>
                     <div className="city-card">
-                        <p className="city-name">{cityInfo.cityName}</p>
+                        <p className="city-name" title={cityInfo.cityName}>{cityInfo.cityName}</p>
                         <p><i class="fa fa-bookmark-o icon-bookmark" aria-hidden="true"></i></p>
                         <p className="tour-date">{cityInfo.tourDate}</p>
                         <p className="category">{cityInfo.category}</p>

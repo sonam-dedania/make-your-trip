@@ -22,6 +22,10 @@ class CityList extends React.Component {
         });
     }
 
+    changeValue = (e) => {
+        this.props.selectedValue(e);
+    }
+
     render() {
         return (
             <SelectSearch
@@ -29,6 +33,7 @@ class CityList extends React.Component {
                 search
                 filterOptions={fuzzySearch}
                 placeholder="All Places"
+                onChange={this.changeValue}
             />
         )
     }
