@@ -151,17 +151,11 @@ class DisplayCities extends React.Component {
                             </Col>
                         </Row>
                         <Row>
-                            {
-                                this.state.cityCardData.map(card => {
-                                    return <Col lg={3} md={3} sm={3}>
-                                        < CityCard data={card} />
-                                    </Col>
-                                })
-                            }
+                            <CityCard />
                         </Row>
                     </div>
-                </div >
-            </div >
+                </div>
+            </div>
         )
     }
 }
