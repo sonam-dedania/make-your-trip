@@ -47,21 +47,21 @@ class SignupPage extends React.Component {
             <div className="outer-container">
                 <div className="inner-container">
                     <Row>
-                        <Col lg={6} md={6} sm={12} className="left-col d-none d-lg-block">
+                        <Col lg={6} md={6} sm={12} xs={12} className="left-col d-none d-lg-block">
                             <Logo />
                             <img src={Home} alt="home.svg" className="home-img" />
                         </Col>
-                        <Col lg={6} md={12} sm={12} className="right-col">
+                        <Col lg={6} md={12} sm={12} xs={12} className="right-col">
                             <div className="d-block d-lg-none right-logo" >
                                 <Logo />
                             </div>
                             <h3 className="h3-header"><b>Get's started.</b></h3>
                             <p className="normal-para"><span className="gry">Already have an account?</span> <span className="org">Log in</span></p>
                             <Row>
-                                <Col lg={6} md={6} sm={6}>
+                                <Col lg={6} md={6} sm={6} xs={6}>
                                     <Button className="btn google-btn"><img src={Google} alt="google.png" /> &#x2002;Sign up with Google</Button>
                                 </Col>
-                                <Col lg={6} md={6} sm={6}>
+                                <Col lg={6} md={6} sm={6} xs={6}>
                                     <Button className="btn facebook-btn"><div className="fb-div"><i class="fa fa-facebook fb-icon" aria-hidden="true"></i></div> &#x2002;Sign up with Facebook</Button>
                                 </Col>
                             </Row>

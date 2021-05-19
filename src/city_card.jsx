@@ -25,7 +25,7 @@ class CityCard extends React.Component {
     render() {
         return (
             this.state.cityDetails.map((cityInfo) => {
-                return <Col lg={4} md={6} sm={6}>
+                return <Col lg={4} md={6} sm={6} xs={6}>
                     <div className="city-card">
                         <div className="city-name" title={cityInfo.cityName}>{cityInfo.cityName}</div>
                         <div><i class="fa fa-bookmark-o icon-bookmark" aria-hidden="true"></i></div>
@@ -35,11 +35,11 @@ class CityCard extends React.Component {
                         <div className="city-temp">+ {cityInfo.temp}&#x00B0;C <img src={Sun} alt="" /></div>
                         <img src={cityInfo.cityImg} className="city-img" alt="bahamas.jfif" />
                         <Row>
-                            <Col lg={6} md={6} sm={12}>
+                            <Col lg={6} md={6} sm={12} xs={12}>
                                 <div className="tl-price">Total Price:</div>
                                 <div className="price">{cityInfo.price}</div>
                             </Col>
-                            <Col lg={6} md={6} sm={12}>
+                            <Col lg={6} md={6} sm={12} xs={12}>
                                 <Button className="btn explore-btn">Explore</Button>
                             </Col>
                         </Row>

@@ -59,7 +59,7 @@ class DisplayCities extends React.Component {
             <div className="gry-container">
                 <div className="gry1-container">
                     <Row>
-                        <Col lg={8} md={8} sm={8}>
+                        <Col lg={8} md={8} sm={8} xs={8}>
                             <div className="header">
                                 <Navbar className="menu-padding">
                                     <Logo1 />
@@ -91,17 +91,17 @@ class DisplayCities extends React.Component {
 
                     <div className="body-part">
                         <Row>
-                            <Col lg={3} md={6} sm={6}>
+                            <Col lg={3} md={6} sm={6} xs={6}>
                                 <div className="date">{this.state.date}</div>
                                 <div className="d-m-y">
                                     <div className="day-yr"><b>{this.state.day}</b></div><br />
                                     <div className="month gry">{this.state.month}, {this.state.year}</div>
                                 </div>
                             </Col>
-                            <Col lg={3} md={6} sm={6} className="d-block d-lg-none">
+                            <Col lg={3} md={6} sm={6} xs={6} className="d-block d-lg-none">
                                 <CitiesWeather selectedCity={this.state.selectedCity} />
                             </Col>
-                            <Col lg={6} md={12} sm={12} className="align-left">
+                            <Col lg={6} md={12} sm={12} xs={12} className="align-left">
                                 <div className="border-box">
                                     <div className="select-dropdown">
                                         <p className="all-place-para">Select Place</p>
@@ -130,10 +130,12 @@ class DisplayCities extends React.Component {
                                     <div className="filter-div">
                                         <Button className="btn sort-btn"><i class="fa fa-sliders icon-slider" aria-hidden="true"></i></Button>
                                     </div>
-                                    <Button className="btn go-btn"><i class="fa fa-search icon-search" aria-hidden="true"></i> Go!</Button>
+                                    <div className="go-btn-div">
+                                        <Button className="btn go-btn"><i class="fa fa-search icon-search" aria-hidden="true"></i> Go!</Button>
+                                    </div>
                                 </div>
                             </Col>
-                            <Col lg={3} md={6} sm={6} className="d-none d-lg-block">
+                            <Col lg={3} md={6} sm={6} xs={6} className="d-none d-lg-block">
                                 <CitiesWeather selectedCity={this.state.selectedCity} />
                             </Col>
                         </Row>
