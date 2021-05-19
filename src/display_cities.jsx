@@ -59,8 +59,12 @@ class DisplayCities extends React.Component {
             <div className="gry-container">
                 <div className="gry1-container">
                     <Row>
-                        <Col lg={8} md={8} sm={8} xs={8}>
-                            <div className="header">
+                        <Col lg={8} md={8} sm={8} xs={6}>
+                            <div className="d-block d-sm-none left-logo">
+                                <Logo1 />
+                            </div>
+
+                            <div className="header d-none d-sm-block">
                                 <Navbar className="menu-padding">
                                     <Logo1 />
                                     <Nav className="mr-auto menubar" variant="tabs" activeKey="#home">
@@ -72,7 +76,7 @@ class DisplayCities extends React.Component {
                                 </Navbar>
                             </div>
                         </Col>
-                        <Col lg={4} md={4} sm={4}>
+                        <Col lg={4} md={4} sm={4} xs={6}>
                             <div className="right-header">
                                 <div className="menubar1 d-none d-lg-block"><b>SAVED OFFERS</b></div>
                                 <i class="fa fa-bookmark-o icon-bookmark1 d-none d-lg-block" aria-hidden="true"></i>&#x2003;
@@ -86,7 +90,7 @@ class DisplayCities extends React.Component {
 
                             </div>
                         </Col>
-                        <hr className="hr-top" />
+                        <hr className="hr-top d-none d-sm-block" />
                     </Row>
 
                     <div className="body-part">
@@ -98,10 +102,10 @@ class DisplayCities extends React.Component {
                                     <div className="month gry">{this.state.month}, {this.state.year}</div>
                                 </div>
                             </Col>
-                            <Col lg={3} md={6} sm={6} xs={6} className="d-block d-lg-none">
+                            <Col lg={2} md={6} sm={6} xs={6} className="d-block d-lg-none">
                                 <CitiesWeather selectedCity={this.state.selectedCity} />
                             </Col>
-                            <Col lg={6} md={12} sm={12} xs={12} className="align-left">
+                            <Col lg={7} md={12} sm={12} xs={12} className="align-left">
                                 <div className="border-box">
                                     <div className="select-dropdown">
                                         <p className="all-place-para">Select Place</p>
@@ -135,7 +139,7 @@ class DisplayCities extends React.Component {
                                     </div>
                                 </div>
                             </Col>
-                            <Col lg={3} md={6} sm={6} xs={6} className="d-none d-lg-block">
+                            <Col lg={2} md={6} sm={6} xs={6} className="d-none d-lg-block">
                                 <CitiesWeather selectedCity={this.state.selectedCity} />
                             </Col>
                         </Row>

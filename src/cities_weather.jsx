@@ -35,10 +35,11 @@ class CitiesWeather extends React.Component {
     }
 
     render() {
+        let t = Math.round(this.state.temp);
         return (
             <div className="weather">
                 <img src={Cloud} alt="cloud.png" className="cloud-img" />
-                <div className="temp">{this.state.temp}&#x00B0;</div>
+                <div className="temp">{t}&#x00B0;</div>
                 <div className="city"><b>{this.state.city}</b><br /><span className="gry">{this.state.country}</span></div>
             </div>
         );

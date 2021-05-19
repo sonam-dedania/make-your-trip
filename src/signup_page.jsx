@@ -51,18 +51,28 @@ class SignupPage extends React.Component {
                             <Logo />
                             <img src={Home} alt="home.svg" className="home-img" />
                         </Col>
+                        <div className="d-block d-lg-none right-logo" >
+                            <Logo />
+                        </div>
                         <Col lg={6} md={12} sm={12} xs={12} className="right-col">
-                            <div className="d-block d-lg-none right-logo" >
-                                <Logo />
-                            </div>
                             <h3 className="h3-header"><b>Get's started.</b></h3>
                             <p className="normal-para"><span className="gry">Already have an account?</span> <span className="org">Log in</span></p>
                             <Row>
                                 <Col lg={6} md={6} sm={6} xs={6}>
-                                    <Button className="btn google-btn"><img src={Google} alt="google.png" /> &#x2002;Sign up with Google</Button>
+                                    <div className="d-none d-sm-block">
+                                        <Button className="btn google-btn"><img src={Google} alt="google.png" /> &#x2002;Sign up with Google</Button>
+                                    </div>
+                                    <div className="d-block d-sm-none">
+                                        <Button className="btn google-btn1"><img src={Google} alt="google.png" /></Button>
+                                    </div>
                                 </Col>
                                 <Col lg={6} md={6} sm={6} xs={6}>
-                                    <Button className="btn facebook-btn"><div className="fb-div"><i class="fa fa-facebook fb-icon" aria-hidden="true"></i></div> &#x2002;Sign up with Facebook</Button>
+                                    <div className="d-none d-sm-block">
+                                        <Button className="btn facebook-btn"><div className="fb-div"><i class="fa fa-facebook fb-icon" aria-hidden="true"></i></div> &#x2002;Sign up with Facebook</Button>
+                                    </div>
+                                    <div className="d-block d-sm-none">
+                                        <Button className="btn facebook-btn1"><div className="fb-div"><i class="fa fa-facebook fb-icon" aria-hidden="true"></i></div></Button>
+                                    </div>
                                 </Col>
                             </Row>
                             <div className="normal-para1 gry or">or</div>

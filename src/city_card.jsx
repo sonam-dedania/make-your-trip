@@ -25,7 +25,7 @@ class CityCard extends React.Component {
     render() {
         return (
             this.state.cityDetails.map((cityInfo) => {
-                return <Col lg={4} md={6} sm={6} xs={6}>
+                return <Col lg={4} md={6} sm={6} xs={12}>
                     <div className="city-card">
                         <div className="city-name" title={cityInfo.cityName}>{cityInfo.cityName}</div>
                         <div><i class="fa fa-bookmark-o icon-bookmark" aria-hidden="true"></i></div>
