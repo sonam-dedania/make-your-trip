@@ -23,7 +23,6 @@ class CitiesWeather extends React.Component {
         }
     }
 
-
     fetchData = (cityData) => {
 
         let citySelected = (cityData === "") ? "ahmedabad" : cityData;

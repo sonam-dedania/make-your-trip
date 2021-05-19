@@ -74,8 +74,8 @@ class DisplayCities extends React.Component {
                         </Col>
                         <Col lg={4} md={4} sm={4}>
                             <div className="right-header">
-                                <p className="menubar1"><b>SAVED OFFERS</b></p>
-                                <i class="fa fa-bookmark-o icon-bookmark1" aria-hidden="true"></i>&#x2003;
+                                <div className="menubar1 d-none d-lg-block"><b>SAVED OFFERS</b></div>
+                                <i class="fa fa-bookmark-o icon-bookmark1 d-none d-lg-block" aria-hidden="true"></i>&#x2003;
 
                                 <div className="profile">
                                     <img src={Avatar} className="avatar-img" alt="avatar.jfif" />
@@ -91,14 +91,17 @@ class DisplayCities extends React.Component {
 
                     <div className="body-part">
                         <Row>
-                            <Col lg={3} md={3} sm={3}>
+                            <Col lg={3} md={6} sm={6}>
                                 <div className="date">{this.state.date}</div>
                                 <div className="d-m-y">
                                     <div className="day-yr"><b>{this.state.day}</b></div><br />
                                     <div className="month gry">{this.state.month}, {this.state.year}</div>
                                 </div>
                             </Col>
-                            <Col lg={6} md={6} sm={6} className="align-left">
+                            <Col lg={3} md={6} sm={6} className="d-block d-lg-none">
+                                <CitiesWeather selectedCity={this.state.selectedCity} />
+                            </Col>
+                            <Col lg={6} md={12} sm={12} className="align-left">
                                 <div className="border-box">
                                     <div className="select-dropdown">
                                         <p className="all-place-para">Select Place</p>
@@ -112,11 +115,11 @@ class DisplayCities extends React.Component {
                                     </div>
                                     <div className="border-right1">
                                         <div className="any-date">
-                                            <p className="select-date1">Select Date</p><br />
+                                            <div className="select-date1">Select Date</div>
                                             {!this.state.startDate &&
-                                                <p className="any-date-para">Any date
+                                                <div className="any-date-para">Any date
                                                 <i class="fa fa-sort-desc icon-sort" aria-hidden="true"></i>
-                                                </p>
+                                                </div>
                                             }
                                         </div>
                                         <DatePicker
@@ -130,7 +133,7 @@ class DisplayCities extends React.Component {
                                     <Button className="btn go-btn"><i class="fa fa-search icon-search" aria-hidden="true"></i> Go!</Button>
                                 </div>
                             </Col>
-                            <Col lg={3} md={3} sm={3}>
+                            <Col lg={3} md={6} sm={6} className="d-none d-lg-block">
                                 <CitiesWeather selectedCity={this.state.selectedCity} />
                             </Col>
                         </Row>
