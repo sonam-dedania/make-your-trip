@@ -101,8 +101,7 @@
   background-color: #4373C0!important;
   padding: 10px!important;
   font-family: poppins-regular;
-  height: 40px !important;
-  width: 40px !important;
+  width: 100%;
   margin-top: 18px;
   border-radius: 7px!important;
 }
@@ -119,8 +118,7 @@
 }
 .google-btn1
 {
-  height: 40px !important;
-  width: 40px !important;
+  width: 100%;
   margin-top: 18px;
   border-radius: 7px!important;
   background-color: #ffffff!important;
@@ -399,6 +397,7 @@
 {
   border-right: 1px solid #ADADAD;
   max-height: 60px;
+  flex: 1;
 }
 .go-btn
 {
@@ -531,10 +530,6 @@
   margin-top: 10px;
   display: inline-block;
 }
-.align-left
-{
-  margin-left: -81px;
-}
 .date
 { 
   font-size: 47px;
@@ -629,10 +624,16 @@
 {
   border-bottom: 2px solid #000000;
 }
+.icon-bookmark-o
+{
+  float: right;
+  margin-top: -25px;
+}
 .icon-bookmark
 {
   float: right;
   margin-top: -25px;
+  color: #F97071;
 }
 .explore-btn
 {
@@ -759,6 +760,7 @@
   display: inline-block;
   border-right: 1px solid #ADADAD;
   padding-right: 20px;
+  flex: 1;
 }
 .city-list
 {
@@ -842,6 +844,26 @@
   top: -25px;
 }
 
+@media (max-width: 992px)
+{
+  .date
+{ 
+  font-size: 35px;
+  display: inline-block;
+  line-height: 40px;
+}
+.day-yr
+{
+  font-size: 11px;
+  margin-top: 10px;
+  display: inline-block;
+}
+.month
+{
+  display: inline-block;
+  font-size: 11px;
+}
+}
 @media (max-width: 768px)
 {
   .explore-btn{
@@ -869,7 +891,7 @@
 }
 .date
 { 
-  font-size: 37px;
+  font-size: 30px;
   margin-left: -8px;
   display: inline-block;
   line-height: 40px;
@@ -888,7 +910,7 @@
 .cloud-img {
   width: 25px;
   height: 20px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .temp {
   font-size: 25px;
@@ -897,8 +919,8 @@
 
 }
 .city {
-  margin-top: 3px;
-  font-size: 15px;
+  margin-top: 7px;
+  font-size: 13px;
 }
 .gry-container {
   padding-top: 20px;

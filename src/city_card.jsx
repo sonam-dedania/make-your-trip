@@ -22,13 +22,20 @@ class CityCard extends React.Component {
         });
     }
 
+
+    bookmarkClicked = (index) => {
+        let newArray = this.state.cityDetails;
+        newArray[index].isBookmark = !newArray[index].isBookmark;
+        this.setState({ cityDetails: newArray });
+    }
+
     render() {
         return (
-            this.state.cityDetails.map((cityInfo) => {
+            this.state.cityDetails.map((cityInfo, index) => {
                 return <Col lg={4} md={6} sm={6} xs={12}>
                     <div className="city-card">
                         <div className="city-name" title={cityInfo.cityName}>{cityInfo.cityName}</div>
-                        <div><i class="fa fa-bookmark-o icon-bookmark" aria-hidden="true"></i></div>
+                        <div onClick={() => this.bookmarkClicked(index)}><i className={`fa ${(cityInfo.isBookmark === true) ? 'fa-bookmark icon-bookmark' : 'fa-bookmark-o icon-bookmark-o'}`} aria-hidden="true"></i></div>
                         <div className="tour-date">{cityInfo.tourDate}</div>
                         <div className="category">{cityInfo.category}</div>
                         <div className="avg-temp"><span className="border-bot">Ave</span>rage Temperature</div>

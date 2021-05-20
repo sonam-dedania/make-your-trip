@@ -95,17 +95,17 @@ class DisplayCities extends React.Component {
 
                     <div className="body-part">
                         <Row>
-                            <Col lg={3} md={6} sm={6} xs={6}>
+                            <Col lg={2} md={6} sm={6} xs={6}>
                                 <div className="date">{this.state.date}</div>
                                 <div className="d-m-y">
                                     <div className="day-yr"><b>{this.state.day}</b></div><br />
                                     <div className="month gry">{this.state.month}, {this.state.year}</div>
                                 </div>
                             </Col>
-                            <Col lg={2} md={6} sm={6} xs={6} className="d-block d-lg-none">
+                            <Col lg={3} md={6} sm={6} xs={6} className="d-block d-lg-none">
                                 <CitiesWeather selectedCity={this.state.selectedCity} />
                             </Col>
-                            <Col lg={7} md={12} sm={12} xs={12} className="align-left">
+                            <Col lg={7} md={12} sm={12} xs={12} className="d-none d-lg-block">
                                 <div className="border-box">
                                     <div className="select-dropdown">
                                         <p className="all-place-para">Select Place</p>
@@ -139,7 +139,7 @@ class DisplayCities extends React.Component {
                                     </div>
                                 </div>
                             </Col>
-                            <Col lg={2} md={6} sm={6} xs={6} className="d-none d-lg-block">
+                            <Col lg={3} md={6} sm={6} xs={6} className="d-none d-lg-block">
                                 <CitiesWeather selectedCity={this.state.selectedCity} />
                             </Col>
                         </Row>
