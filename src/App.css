@@ -872,6 +872,7 @@
   margin-top: 15px;
   flex-wrap: nowrap;
   flex-direction: row;
+  box-shadow: 0px 0px 8px 0px #cdcdcd;
   margin-bottom: 15px;
   display: flex;
   padding: 15px;
@@ -895,30 +896,42 @@
 .user-profile
 {
   flex: 5%;
+  margin-right: 3px;
 }
 .user-name
-{
+{  
+  margin-left: 3px;
+  margin-right: 3px;
   flex: 15%;
 }
 .gender-info
 {
+  margin-left: 3px;
+  margin-right: 3px;
   flex: 7%;
 }
 .DOB-info
 {
-  flex: 10%;
+  margin-left: 3px;
+  margin-right: 3px;
+ flex: 10%;
 }
 .email-info
 {
-  flex: 23%;
+  margin-left: 3px;
+  margin-right: 3px;
+ flex: 23%;
 }
 .city-info
 {
+  margin-left: 3px;
+  margin-right: 3px;
   flex: 20%;
 }
 .phone-info
 {
-  flex: 20%;
+  margin-left: 3px;
+  flex: 15%;
 }
 .icon-envelope
 {
