@@ -69,7 +69,7 @@ class DisplayCities extends React.Component {
                                     <Logo1 />
                                     <Nav className="mr-auto menubar" variant="tabs" activeKey="#home">
                                         <Nav.Link href="#home" eventKey="home" className="link-clr active">HOME</Nav.Link>
-                                        <Nav.Link href="#search" eventKey="search" className="link-clr">SEARCH</Nav.Link>
+                                        <Nav.Link href="/happyusers" eventKey="happy users" className="link-clr">HAPPY USERS</Nav.Link>
                                         <Nav.Link href="#tours" eventKey="tours" className="link-clr">TOURS 2021</Nav.Link>
                                         <Nav.Link href="#hot deals" eventKey="hot deals" className="link-clr">HOT DEALS</Nav.Link>
                                     </Nav>

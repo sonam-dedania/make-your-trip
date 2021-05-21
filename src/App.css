@@ -331,6 +331,11 @@
   margin-top: -9px!important;
   border: solid 0.1px #adadad;
 }
+.hr-top1
+{
+  margin-top: 15px!important;
+  border: solid 0.1px #adadad;
+}
 .body-part
 {
   padding-left: 50px;
@@ -844,6 +849,101 @@
   top: -25px;
 }
 
+.happy-users-container
+{
+  background-color: #FAF9F9;
+  border-radius: 8px;
+  margin: 20px;
+  padding-top: 50px;
+  padding-left: 40px;
+  font-family: poppins-regular;
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
+.happy-user-title
+{
+  font-size: 40px;
+  font-weight: bold;
+}
+.user-info-container
+{
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-top: 15px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin-bottom: 15px;
+  display: flex;
+  padding: 15px;
+}
+.user-profile-img
+{
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+}
+.bold
+{
+  font-weight: bold;
+}
+.label
+{
+ color: #CDCDCD;
+ font-size: 14px; 
+ margin-bottom: 5px;
+}
+.user-profile
+{
+  flex: 5%;
+}
+.user-name
+{
+  flex: 15%;
+}
+.gender-info
+{
+  flex: 7%;
+}
+.DOB-info
+{
+  flex: 10%;
+}
+.email-info
+{
+  flex: 23%;
+}
+.city-info
+{
+  flex: 20%;
+}
+.phone-info
+{
+  flex: 20%;
+}
+.icon-envelope
+{
+  font-size:25px!important;
+  color: #F97071;
+  padding-right: 10px;
+  margin-top: -5px;
+  vertical-align: middle;
+}
+.icon-phone
+{
+  margin-top: -5px;
+  color: #F97071;
+  vertical-align: middle;
+  font-size:25px!important;
+  padding-right: 10px;
+}
+
+
+
+
+
+
+
+
 @media (max-width: 992px)
 {
   .date
@@ -869,6 +969,9 @@
   .explore-btn{
     float: left;
     margin-top: 10px!important;
+  }
+  .user-info-container{
+    flex-direction: column;
   }
 }
 @media (max-width: 576px)
