@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import qwest from 'qwest';
+import Header from './header';
 import InfiniteScroll from 'react-infinite-scroller';
 class HappyUser extends React.Component {
     constructor(props) {
@@ -58,18 +58,22 @@ class HappyUser extends React.Component {
         })
 
         return (
-            <InfiniteScroll
-                pageStart={0}
-                loadMore={this.loadFunc}
-                hasMore={true}
-                loader={<div className="loader" key={0} > Loading ...</div>}
-            >
-                <div className="happy-users-container">
-                    <h1 className="happy-user-title">Happy User</h1>
-                    <hr className="hr-top1" />
-                    {items}
-                </div>
-            </InfiniteScroll>
+            <>
+                <InfiniteScroll
+                    pageStart={0}
+                    loadMore={this.loadFunc}
+                    hasMore={true}
+                    loader={<div className="loader" key={0} > Loading ...</div>}
+                >
+                    <div className="happy-users-container">
+                        <Header />
+                        <div className="happy-user-margin">
+                            <h1 className="happy-user-title">Happy User</h1>
+                            {items}
+                        </div>
+                    </div>
+                </InfiniteScroll>
+            </>
         )
     }
 }
