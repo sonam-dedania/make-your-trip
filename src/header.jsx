@@ -13,14 +13,13 @@ class Header extends React.Component {
     }
 
     render() {
-        const { location } = props;
         return (
             <Row>
                 <Col lg={8} md={8} sm={8} xs={6}>
                     <div className="header d-none d-sm-block">
-                        <Navbar className="menu-padding">
+                        <Navbar collapseOnSelect className="menu-padding">
                             <Logo1 />
-                            <Nav className="mr-auto menubar" variant="tabs" activeKey={location.pathname}>
+                            <Nav className="mr-auto menubar" variant="tabs" activeKey="#home">
                                 <Nav.Link href="/home" eventKey="home" className="link-clr active">HOME</Nav.Link>
                                 <Nav.Link href="/happyusers" eventKey="happy users" className="link-clr">HAPPY USERS</Nav.Link>
                                 <Nav.Link href="#tours" eventKey="tours" className="link-clr">TOURS 2021</Nav.Link>

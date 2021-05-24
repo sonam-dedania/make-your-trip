@@ -5,6 +5,7 @@ import { Row, Col } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import Google from './Images/google.png';
 import Home from './Images/home.svg';
+import SignUpForm from './sign_up_form';
 import 'font-awesome/css/font-awesome.min.css';
 import Logo from './logo';
 import { reactLocalStorage } from 'reactjs-localstorage';
@@ -56,8 +57,9 @@ class SignupPage extends React.Component {
                         </div>
                         <Col lg={6} md={12} sm={12} xs={12} className="right-col">
                             <h3 className="h3-header"><b>Get's started.</b></h3>
-                            <p className="normal-para"><span className="gry">Already have an account?</span> <span className="org">Log in</span></p>
-                            <Row>
+                            <p className="normal-para"><span className="gry">New User?</span> <span className="org">Sign up</span></p>
+                            <div className="login-form-container d-none">
+                                <Row>
                                 <Col lg={6} md={6} sm={6} xs={6}>
                                     <div className="d-none d-sm-block">
                                         <Button className="btn google-btn"><img src={Google} alt="google.png" /> &#x2002;Sign up with Google</Button>
@@ -75,6 +77,7 @@ class SignupPage extends React.Component {
                                     </div>
                                 </Col>
                             </Row>
+                           
                             <div className="normal-para1 gry or">or</div>
                             <div className="email-container">
                                 <label>Email address</label><br />
@@ -92,6 +95,8 @@ class SignupPage extends React.Component {
 
                             <Button className="btn register-btn" onClick={this.buttonClicked}>Login</Button>
                             <div className="errormsg">{this.state.errormsg}</div>
+                            </div>
+                            <SignUpForm/>
                         </Col>
                     </Row>
                 </div>
