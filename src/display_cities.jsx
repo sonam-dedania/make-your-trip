@@ -44,9 +44,6 @@ class DisplayCities extends React.Component {
         this.setState({ startDate: date });
     }
 
-    handleSelect = () => {
-        reactLocalStorage.clear("logindetail");
-    }
 
     selectedValue = (e) => {
         this.setState({ selectedCity: e });
@@ -58,11 +55,8 @@ class DisplayCities extends React.Component {
 
     componentDidMount = () => {
         let l = reactLocalStorage.get("logindetail");
-        if (l === "true") {
-            //   window.open("/home", "_self");
-        }
-        else {
-            window.open("/make-your-trip", "_self");
+        if (l !== "true") {
+            window.open("/", "_self");
         }
     }
 
@@ -71,7 +65,7 @@ class DisplayCities extends React.Component {
         return (
             <div className="gry-container">
                 <div className="gry1-container">
-                    <Header counter={this.state.totalCount} />
+                    <Header counter={this.state.totalCount} showBookmark={true} />
                     <div className="body-part">
                         <Row>
                             <Col lg={2} md={6} sm={6} xs={6}>

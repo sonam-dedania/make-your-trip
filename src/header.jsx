@@ -5,6 +5,8 @@ import Logo1 from './logo';
 import { Dropdown, DropdownButton } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import Avatar from './Images/avatar.jfif';
+import { reactLocalStorage } from 'reactjs-localstorage';
+
 
 import {
     NavLink,
@@ -12,6 +14,11 @@ import {
 class Header extends React.Component {
     constructor(props) {
         super(props);
+    }
+
+    handleSelect = () => {
+        reactLocalStorage.clear("logindetail");
+        window.open("/", "_self");
     }
 
     render() {
@@ -36,13 +43,17 @@ class Header extends React.Component {
                 <Col lg={4} md={4} sm={4} xs={6}>
                     <div className="right-header">
                         <div className="menubar1 d-none d-lg-block"><b>SAVED OFFERS</b></div>
-                        <i class="fa fa-bookmark-o icon-bookmark1 d-none d-lg-block" aria-hidden="true"></i>
-                        <span className="sup-data"><sup>{this.props.counter}</sup></span>&#x2003;
+                        {this.props.showBookmark &&
+                            <>
+                                <i class="fa fa-bookmark-o icon-bookmark1 d-none d-lg-block" aria-hidden="true"></i>
+                                <span className="sup-data d-none d-lg-block"><sup>{this.props.counter}</sup></span>&#x2003;
+                            </>
+                        }
 
-                                <div className="profile">
+                        <div className="profile">
                             <img src={Avatar} className="avatar-img" alt="avatar.jfif" />
                             <DropdownButton onSelect={this.handleSelect} className="profile-logout">
-                                <Dropdown.Item href="/make-your-trip" eventKey='Logout'>Logout</Dropdown.Item>
+                                <Dropdown.Item eventKey='Logout'>Logout</Dropdown.Item>
                             </DropdownButton>
                         </div>
                     </div>

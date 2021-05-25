@@ -18,14 +18,11 @@ class CityCard extends React.Component {
             return response.json();
         }).then((result) => {
             this.setState({ cityDetails: result });
+            this.setBookmarkCount();
         });
     }
 
-    bookmarkClicked = (index) => {
-        let newArray = this.state.cityDetails;
-        newArray[index].isBookmark = !newArray[index].isBookmark;
-        this.setState({ cityDetails: newArray });
-
+    setBookmarkCount = () => {
         var count = 0;
         this.state.cityDetails.map((city) => {
             if (city.isBookmark === true) {
@@ -33,6 +30,13 @@ class CityCard extends React.Component {
             }
         })
         this.props.bookmarkcount(count);
+    }
+
+    bookmarkClicked = (index) => {
+        let newArray = this.state.cityDetails;
+        newArray[index].isBookmark = !newArray[index].isBookmark;
+        this.setState({ cityDetails: newArray });
+        this.setBookmarkCount();
     }
 
     render() {

@@ -24,10 +24,7 @@ class HappyUser extends React.Component {
 
     componentDidMount = () => {
         let l = reactLocalStorage.get("logindetail");
-        if (l === "true") {
-            //      window.open("/happyusers", "_self");
-        }
-        else {
+        if (l !== "true") {
             window.open("/make-your-trip", "_self");
         }
     }
@@ -56,7 +53,7 @@ class HappyUser extends React.Component {
                 </div>
                 <div className="email-info">
                     <div className="label">Contact</div>
-                    <div className="user-email bold"><i class="fa fa-envelope icon-envelope" aria-hidden="true"></i> {user.email}</div>
+                    <div className="user-email bold" title={user.email}><i class="fa fa-envelope icon-envelope" aria-hidden="true"></i> {user.email}</div>
                     <div className="phone bold"><i class="fa fa-phone-square icon-phone" aria-hidden="true"></i> {user.phone}</div>
                 </div>
                 <div className="city-info">
@@ -77,7 +74,7 @@ class HappyUser extends React.Component {
                 >
                     <div className="gry-container">
                         <div className="gry1-container">
-                            <Header />
+                            <Header showBookmark={false} />
                             <div className="body-part">
                                 <h1 className="happy-user-title">Happy User</h1>
                                 {items}
