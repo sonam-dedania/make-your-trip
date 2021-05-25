@@ -222,6 +222,10 @@
   margin-left: 20px;
   margin-top: 5px;
 }
+.gender
+{
+  margin-left: 15px;
+}
 .right-logo
 {
   margin-bottom: 20px!important;
@@ -298,13 +302,39 @@
   font-size: 13px!important;
   box-shadow: 0px 9px 20px 0px #ffa39a;
 }
-
+.gender-radio
+{
+  margin-top: 10px;
+  margin-left: -16px;
+  margin-bottom: 20px;
+}
+input[type="radio"]:checked:after
+{
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #F97071;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
 .email-container
 {
   font-family: poppins-regular;
   font-size: 13px;
   position: relative;
   margin-top: 10px;
+}
+.gender-container
+{
+  font-family: poppins-regular;
+  font-size: 13px;
+  position: relative;
+  margin-top: -13px;
 }
 .password-container
 {
@@ -400,6 +430,7 @@
   padding-right:50px;
   padding-top: 40px;
   padding-bottom: 40px;
+  min-height: calc(100vh - 320px);
   font-family: poppins-regular;
 }
 .select-date
@@ -679,6 +710,7 @@
 }
 .city-img
 {
+  object-fit: cover;
   width: 100%;
   height: 200px;
   border-radius: 10px;
@@ -691,9 +723,11 @@
 {
   float: right;
   margin-top: -25px;
+  cursor: pointer;
 }
 .icon-bookmark
 {
+  cursor: pointer;
   float: right;
   margin-top: -25px;
   color: #F97071;
@@ -727,6 +761,7 @@
 .icon-bookmark1
 {
   margin-top: 28px!important;
+  font-size: 18px!important;
 }
 .avatar-img
 {
@@ -743,6 +778,21 @@
   margin-top: 17px;
   border: 3px solid red;
   position: relative;
+}
+.signup-link
+{
+  text-decoration: underline;
+  color: #F97071;  
+}
+.signup-link:hover
+{
+  text-decoration: underline;
+  color: #F97071;  
+}
+
+.signup-form-container
+{
+  margin-top: 30px;
 }
 .trip-logo
 {
@@ -777,6 +827,23 @@
   left: 114px;
   color: #1d057b;
   top: 13px;
+}
+.DOB-datepicker
+{
+  margin-top: 30px;
+  display: block;
+  padding: 5px 5px 5px 5px;
+  width: 100%!important;
+  font-size: 14px;
+  height: 40px;
+  border-radius: 6px;
+  border: solid 2px #CDCDCD;
+  text-align: center;
+}
+.DOB-datepicker:focus
+{
+  border:  2px solid #FF5A54 !important; 
+  outline: none!important;
 }
 .datepicker
 {
@@ -905,31 +972,13 @@
 .react-datepicker-wrapper{
   position: relative;
   top: -25px;
-}
-
-.happy-users-container
-{
-  background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 100%);
-  border-radius: 8px;
-  margin: 20px;
-  padding-top: 50px;
-  padding-left: 40px;
-  font-family: poppins-regular;
-  padding-right: 40px;
-  padding-bottom: 40px;
-}
-.happy-user-margin
-{
-  padding-left: 50px;
-  padding-right:50px;
-  padding-bottom: 40px;
+  width: 100%;
 }
 .happy-user-title
 {
   font-size: 40px;
   font-weight: bold;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 40px;
 }
 .user-info-container
@@ -943,6 +992,20 @@
   margin-bottom: 15px;
   display: flex;
   padding: 15px;
+}
+.sup-data
+{
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #F97071;
+  padding: 3px;
+  height: 23px;
+  margin-left: -5px;
+  text-align: center;
+  width: 23px;
+  color: #ffffff;
+  border-radius: 50%;
 }
 .user-profile-img
 {
@@ -963,42 +1026,37 @@
 .user-profile
 {
   flex: 5%;
-  margin-right: 3px;
+  margin-right: 10px;
 }
 .user-name
 {  
-  margin-left: 3px;
-  margin-right: 3px;
-  flex: 15%;
+  margin-left: 10px;
+  margin-right: 10px;
+  flex: 18%;
 }
 .gender-info
 {
-  margin-left: 3px;
-  margin-right: 3px;
+  margin-left: 10px;
+  margin-right: 10px;
   flex: 7%;
 }
 .DOB-info
 {
-  margin-left: 3px;
-  margin-right: 3px;
- flex: 10%;
+  margin-left: 10px;
+  margin-right: 10px;
+ flex: 13%;
 }
 .email-info
 {
-  margin-left: 3px;
-  margin-right: 3px;
- flex: 23%;
+  margin-left: 10px;
+  margin-right: 10px;
+ flex: 28%;
 }
 .city-info
 {
-  margin-left: 3px;
-  margin-right: 3px;
-  flex: 20%;
-}
-.phone-info
-{
-  margin-left: 3px;
-  flex: 15%;
+  margin-left: 10px;
+  margin-right: 10px;
+  flex: 23%;
 }
 .icon-envelope
 {
@@ -1016,13 +1074,37 @@
   font-size:25px!important;
   padding-right: 10px;
 }
-
-
-
-
-
-
-
+.user-email
+{
+  margin-bottom: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 180px;
+}
+.loader1
+{
+  background-color: #F97071;
+  color: #ffffff;
+  padding: 30px;
+  font-family: poppins-regular;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+  /* position: fixed; */
+  bottom: 0px;
+  width: 100%;
+}
+.icon-female
+{
+  font-size: 30px!important;
+  color: #F97071;
+}
+.icon-male
+{
+  color: #F97071;
+  font-size: 30px!important;
+}
 
 @media (max-width: 992px)
 {
@@ -1116,4 +1198,5 @@
   margin-left: -10px;
   margin-top: 5px;
 }
+
 }

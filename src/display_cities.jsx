@@ -35,7 +35,8 @@ class DisplayCities extends React.Component {
             day: day2,
             year: year1,
             startDate: null,
-            selectedCity: ""
+            selectedCity: "",
+            totalCount: 0
         }
     }
 
@@ -51,11 +52,26 @@ class DisplayCities extends React.Component {
         this.setState({ selectedCity: e });
     }
 
+    bookmarkCount = (count) => {
+        this.setState({ totalCount: count });
+    }
+
+    componentDidMount = () => {
+        let l = reactLocalStorage.get("logindetail");
+        if (l === "true") {
+            //   window.open("/home", "_self");
+        }
+        else {
+            window.open("/make-your-trip", "_self");
+        }
+    }
+
+
     render() {
         return (
             <div className="gry-container">
                 <div className="gry1-container">
-                    <Header />
+                    <Header counter={this.state.totalCount} />
                     <div className="body-part">
                         <Row>
                             <Col lg={2} md={6} sm={6} xs={6}>
@@ -107,7 +123,7 @@ class DisplayCities extends React.Component {
                             </Col>
                         </Row>
                         <Row>
-                            <CityCard />
+                            <CityCard bookmarkcount={this.bookmarkCount} />
                         </Row>
                     </div>
                 </div>

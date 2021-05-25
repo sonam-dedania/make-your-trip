@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
-import Bahamas from './Images/bahamas.jfif';
 import Sun from './Images/sun.png';
 import { Row, Col, Button } from 'react-bootstrap';
 
@@ -22,11 +21,18 @@ class CityCard extends React.Component {
         });
     }
 
-
     bookmarkClicked = (index) => {
         let newArray = this.state.cityDetails;
         newArray[index].isBookmark = !newArray[index].isBookmark;
         this.setState({ cityDetails: newArray });
+
+        var count = 0;
+        this.state.cityDetails.map((city) => {
+            if (city.isBookmark === true) {
+                count = count + 1;
+            }
+        })
+        this.props.bookmarkcount(count);
     }
 
     render() {

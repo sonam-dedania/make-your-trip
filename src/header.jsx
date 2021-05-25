@@ -6,7 +6,9 @@ import { Dropdown, DropdownButton } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import Avatar from './Images/avatar.jfif';
 
-
+import {
+    NavLink,
+} from "react-router-dom";
 class Header extends React.Component {
     constructor(props) {
         super(props);
@@ -16,14 +18,17 @@ class Header extends React.Component {
         return (
             <Row>
                 <Col lg={8} md={8} sm={8} xs={6}>
+                    <div className="d-block d-sm-none left-logo">
+                        <Logo1 />
+                    </div>
                     <div className="header d-none d-sm-block">
                         <Navbar collapseOnSelect className="menu-padding">
                             <Logo1 />
-                            <Nav className="mr-auto menubar" variant="tabs" activeKey="#home">
-                                <Nav.Link href="/home" eventKey="home" className="link-clr active">HOME</Nav.Link>
-                                <Nav.Link href="/happyusers" eventKey="happy users" className="link-clr">HAPPY USERS</Nav.Link>
-                                <Nav.Link href="#tours" eventKey="tours" className="link-clr">TOURS 2021</Nav.Link>
-                                <Nav.Link href="#hot deals" eventKey="hot deals" className="link-clr">HOT DEALS</Nav.Link>
+                            <Nav className="mr-auto menubar" variant="tabs">
+                                <Nav.Link to="/home" as={NavLink} className="link-clr">HOME</Nav.Link>
+                                <Nav.Link to="/happyusers" as={NavLink} className="link-clr">HAPPY USERS</Nav.Link>
+                                <Nav.Link to="/tours" className="link-clr">TOURS 2021</Nav.Link>
+                                <Nav.Link to="/hot-deals" className="link-clr">HOT DEALS</Nav.Link>
                             </Nav>
                         </Navbar>
                     </div>
@@ -31,7 +36,8 @@ class Header extends React.Component {
                 <Col lg={4} md={4} sm={4} xs={6}>
                     <div className="right-header">
                         <div className="menubar1 d-none d-lg-block"><b>SAVED OFFERS</b></div>
-                        <i class="fa fa-bookmark-o icon-bookmark1 d-none d-lg-block" aria-hidden="true"></i>&#x2003;
+                        <i class="fa fa-bookmark-o icon-bookmark1 d-none d-lg-block" aria-hidden="true"></i>
+                        <span className="sup-data"><sup>{this.props.counter}</sup></span>&#x2003;
 
                                 <div className="profile">
                             <img src={Avatar} className="avatar-img" alt="avatar.jfif" />
