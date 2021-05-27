@@ -8,6 +8,8 @@ import Home from './Images/home.svg';
 import 'font-awesome/css/font-awesome.min.css';
 import Logo from './logo';
 import { reactLocalStorage } from 'reactjs-localstorage';
+import Swal from 'sweetalert2';
+
 class LoginPage extends React.Component {
     constructor(props) {
         super(props);
@@ -20,17 +22,40 @@ class LoginPage extends React.Component {
 
     buttonClicked = () => {
         let isLoggedIn = false;
-        if (this.state.email === "hello@hello.com" && this.state.password === "hello123#") {
-            isLoggedIn = true;
-            window.open("/make-your-trip/home", "_self");
-            reactLocalStorage.set("logindetail", isLoggedIn);
-            this.state.email = "";
-            this.state.password = "";
+
+        if (this.state.email === "" || this.state.password === "") {
+            this.setState({ errormsg: "Please enter valid details" });
         }
         else {
-            this.setState({ errormsg: "Please enter valid details" });
-            this.state.email = "";
-            this.state.password = "";
+            const requestOptions = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    "email": this.state.email,
+                    "password": this.state.password
+                })
+            };
+            fetch('https://zuru-todo-api.herokuapp.com/users/login', requestOptions)
+                .then(response => response.json())
+                .then((result) => {
+                    //ToDo
+                    console.log('res', result);
+                    if (result.id) {
+                        isLoggedIn = true;
+                        reactLocalStorage.set("logindetail", isLoggedIn);
+                        this.state.email = "";
+                        this.state.password = "";
+                        window.open("/make-your-trip/home", "_self");
+                    }
+                    else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Email or Password is Incorrect'
+                        });
+                    }
+                });
+
         }
     }
 

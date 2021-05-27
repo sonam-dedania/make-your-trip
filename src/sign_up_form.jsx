@@ -7,8 +7,9 @@ import Home from './Images/home.svg';
 import DatePicker from 'react-datepicker';
 import 'font-awesome/css/font-awesome.min.css';
 import Logo from './logo';
-import PhoneInput from 'react-phone-input-2'
-import 'react-phone-input-2/lib/style.css'
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
+import Swal from 'sweetalert2';
 
 class SignUpForm extends React.Component {
     constructor(props) {
@@ -102,8 +103,38 @@ class SignUpForm extends React.Component {
 
     submit() {
         if (this.validate()) {
-            console.info("Valid Form");
-            // window.open("/make-your-trip/", "_self");
+            const requestOptions = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    "name": this.state.username,
+                    "email": this.state.email,
+                    "password": this.state.password,
+                    "dob": this.state.DOB,
+                    "gender": this.state.selectedOption,
+                    "mobileNumber": this.state.mobileno.substr(2, 11)
+                })
+            };
+            fetch('https://zuru-todo-api.herokuapp.com/users/register', requestOptions)
+                .then(response => response.json())
+                .then((result) => {
+                    //ToDo
+                    console.log('res', result);
+                    if (result.id) {
+                        Swal.fire({
+                            icon: 'success',
+                            text: 'Registered Successfully'
+                        });
+                        window.open("/make-your-trip/", "_self");
+                    }
+                    else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Username or Email already taken'
+                        });
+                    }
+                });
         }
         else {
             console.error("Invalid Form");
