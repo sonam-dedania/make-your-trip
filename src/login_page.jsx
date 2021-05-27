@@ -22,7 +22,7 @@ class LoginPage extends React.Component {
         let isLoggedIn = false;
         if (this.state.email === "hello@hello.com" && this.state.password === "hello123#") {
             isLoggedIn = true;
-            window.open("/home", "_self");
+            window.open("/make-your-trip/home", "_self");
             reactLocalStorage.set("logindetail", isLoggedIn);
             this.state.email = "";
             this.state.password = "";
@@ -38,7 +38,7 @@ class LoginPage extends React.Component {
         let l = reactLocalStorage.get("logindetail");
         console.log("localstorage data", l);
         if (l === "true") {
-            window.open("/home", "_self");
+            window.open("/make-your-trip/home", "_self");
         }
     }
 
@@ -56,7 +56,7 @@ class LoginPage extends React.Component {
                         </div>
                         <Col lg={6} md={12} sm={12} xs={12} className="right-col">
                             <h3 className="h3-header"><b>Get's started.</b></h3>
-                            <p className="normal-para"><span className="gry">New User?</span> <a className="signup-link" href="/signup"><span className="org">Sign up</span></a></p>
+                            <p className="normal-para"><span className="gry">New User?</span> <a className="signup-link" href="/make-your-trip/signup"><span className="org">Sign up</span></a></p>
                             <div className="login-form-container">
                                 <Row>
                                     <Col lg={6} md={6} sm={6} xs={6}>
@@ -83,7 +83,7 @@ class LoginPage extends React.Component {
                                     <div className="email-div">
                                         <i class="fa fa-envelope-o email-icon" aria-hidden="true"></i>
                                     </div>
-                                    <input type="text" id="email" value={this.state.email} className="email-input" onChange={(e) => this.setState({ email: e.target.value })} />
+                                    <input type="email" id="email" value={this.state.email} className="email-input" onChange={(e) => this.setState({ email: e.target.value })} />
                                 </div>
                                 <div className="password-container">
                                     <label>Password</label><br />

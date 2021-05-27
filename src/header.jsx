@@ -18,7 +18,7 @@ class Header extends React.Component {
 
     handleSelect = () => {
         reactLocalStorage.clear("logindetail");
-        window.open("/", "_self");
+        window.open("/make-your-trip/", "_self");
     }
 
     render() {

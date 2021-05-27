@@ -3,32 +3,66 @@ import './App.css';
 import Header from './header';
 import InfiniteScroll from 'react-infinite-scroller';
 import { reactLocalStorage } from 'reactjs-localstorage';
+import { Button } from 'react-bootstrap';
 
 class HappyUser extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            userDetails: []
+            userDetails: [],
+            maleDetails: [],
+            checkedMale: false,
+            checkedFemale: false,
+            flag: false
         };
     }
 
     loadFunc = () => {
-        fetch("https://randomuser.me/api/?results=20&offset=0").then(function (response) {
+        console.log("load function");
+        let url = "https://randomuser.me/api/?results=20&offset=0";
+        if (this.state.checkedMale) {
+            console.log("male");
+            url = url + "&gender=male";
+        }
+
+        if (this.state.checkedFemale) {
+            console.log("female");
+            url = url + "&gender=female";
+        }
+
+        if (this.state.checkedMale && this.state.checkedFemale) {
+            url = "https://randomuser.me/api/?results=20&offset=0";
+        }
+
+        fetch(url).then(function (response) {
             return response.json();
         }).then((result) => {
-            var mergeArr = this.state.userDetails.concat(result.results);
+            let mergeArr = this.state.userDetails.concat(result.results);
             this.setState({ userDetails: mergeArr });
         });
-
     }
 
     componentDidMount = () => {
         let l = reactLocalStorage.get("logindetail");
         if (l !== "true") {
-            window.open("/make-your-trip", "_self");
+            window.open("/make-your-trip/", "_self");
         }
+
     }
 
+    handleMaleCheckboxChange = () => {
+        this.setState({ checkedMale: !this.state.checkedMale });
+        this.setState({ userDetails: [] });
+    }
+
+    handleFemaleCheckboxChange = () => {
+        this.setState({ checkedFemale: !this.state.checkedFemale });
+        this.setState({ userDetails: [] });
+    }
+
+    handleClicked = () => {
+        this.setState({ flag: !this.state.flag });
+    }
 
     render() {
 
@@ -77,6 +111,19 @@ class HappyUser extends React.Component {
                             <Header showBookmark={false} />
                             <div className="body-part">
                                 <h1 className="happy-user-title">Happy User</h1>
+                                <div className="filter-happyuser">
+                                    <Button className="btn filter-btn" onClick={this.handleClicked}><i class="fa fa-sliders icon-slider-happyuser" aria-hidden="true"></i></Button>
+                                </div>
+                                <div className={`filter-hide-show-wrapper ${(this.state.flag === false) ? 'hidden' : ''}`}>
+                                    < div className="male-checkbox-wrapper">
+                                        <input type="checkbox" checked={this.state.checkedMale} className="male-checkbox" onChange={this.handleMaleCheckboxChange} />
+                                        Male <i class="fa fa-male icon-male-hide-show" aria-hidden="true"></i>
+                                    </div>
+                                    <div className="female-checkbox-wrapper">
+                                        <input type="checkbox" checked={this.state.checkedFemale} className="female-checkbox" onChange={this.handleFemaleCheckboxChange} />
+                                        Female <i class="fa fa-female icon-female-hide-show" aria-hidden="true"></i>
+                                    </div>
+                                </div>
                                 {items}
                             </div>
                         </div>

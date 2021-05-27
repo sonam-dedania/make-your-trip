@@ -216,10 +216,42 @@
   border:  2px solid #FF5A54 !important; 
   outline: none!important;
 }
+.icon-male-hide-show
+{
+  font-size: 20px!important;
+  color: #F97071;
+}
+.icon-female-hide-show
+{
+  font-size: 20px!important;
+  color: #F97071;
+}
+.male-checkbox
+{
+  margin: 10px;
+}
+.female-checkbox
+{
+  margin: 10px;
+}
+.filter-hide-show-wrapper
+{
+  margin-bottom: 20px;
+}
+.hidden
+{
+  display: none;
+}
+.filter-btn
+{
+  background-color: #F7F7F7!important;
+  border: 0px!important;
+}
 .gender-input
 {
   margin-right: 5px;
   margin-left: 20px;
+  cursor: pointer;
   margin-top: 5px;
 }
 .gender
@@ -329,12 +361,20 @@ input[type="radio"]:checked:after
   position: relative;
   margin-top: 10px;
 }
+.DOB-container
+{
+  font-family: poppins-regular;
+  font-size: 13px;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: -23px;
+}
 .gender-container
 {
   font-family: poppins-regular;
   font-size: 13px;
   position: relative;
-  margin-top: -13px;
+  margin-top: 10px;
 }
 .password-container
 {
@@ -537,6 +577,16 @@ input[type="radio"]:checked:after
   padding-left: 10px;
   padding-right: 10px;
 }
+.icon-slider-happyuser
+{
+  color: #000000!important;
+  font-size: 30px!important;
+}
+.filter-happyuser
+{
+  float: right;
+  margin-top: 25px;
+}
 .dropdown1
 {
   padding-top: 5px;
@@ -585,10 +635,17 @@ input[type="radio"]:checked:after
 {
   background-color: #F97071!important;
 }
+.error-msg
+{
+  color: red;
+  margin-top: 10px;
+  font-family: poppins-regular;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
 .errormsg
 {
   color: red;
-  font-weight: bold;
   margin-top: 20px;
   font-family: poppins-regular;
   font-size: 15px;
@@ -840,6 +897,23 @@ input[type="radio"]:checked:after
   border: solid 2px #CDCDCD;
   text-align: center;
 }
+.react-tel-input .form-control
+{
+width: 100%!important;
+border-radius: 6px!important;
+border: solid 2px #CDCDCD!important;
+height: 40px!important;
+}
+.react-tel-input
+{
+  margin-top: 10px!important;
+}
+.form-control:focus
+{
+box-shadow: none!important;
+border:  2px solid #FF5A54 !important; 
+outline: none!important;
+}
 .DOB-datepicker:focus
 {
   border:  2px solid #FF5A54 !important; 
@@ -884,6 +958,15 @@ input[type="radio"]:checked:after
   font-size: 13px!important;
   color:#000000;
   font-weight: bold;
+}
+.react-tel-input .country-list .country:hover
+{
+  background: rgba(226, 134, 58, 0.1)!important;
+}
+.react-tel-input .country-list .country.highlight
+{
+  background-color: #F97071!important;
+  color: #fff!important;
 }
 .select-dropdown
 {
@@ -979,6 +1062,7 @@ input[type="radio"]:checked:after
   font-size: 40px;
   font-weight: bold;
   margin-top: 20px;
+  display: inline-block;
   margin-bottom: 40px;
 }
 .user-info-container

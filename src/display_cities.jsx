@@ -56,7 +56,7 @@ class DisplayCities extends React.Component {
     componentDidMount = () => {
         let l = reactLocalStorage.get("logindetail");
         if (l !== "true") {
-            window.open("/", "_self");
+            window.open("/make-your-trip/", "_self");
         }
     }
 
