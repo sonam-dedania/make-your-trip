@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/make-your-trip/static/css/main.0ca47a51.chunk.css",
+    "main.css": "/make-your-trip/static/css/main.3294b9a3.chunk.css",
     "main.js": "/make-your-trip/static/js/main.f76a3b09.chunk.js",
     "main.js.map": "/make-your-trip/static/js/main.f76a3b09.chunk.js.map",
     "runtime-main.js": "/make-your-trip/static/js/runtime-main.8b0b8fc8.js",
@@ -12,7 +12,7 @@
     "static/js/3.3c3757f5.chunk.js.map": "/make-your-trip/static/js/3.3c3757f5.chunk.js.map",
     "index.html": "/make-your-trip/index.html",
     "static/css/2.91a46da2.chunk.css.map": "/make-your-trip/static/css/2.91a46da2.chunk.css.map",
-    "static/css/main.0ca47a51.chunk.css.map": "/make-your-trip/static/css/main.0ca47a51.chunk.css.map",
+    "static/css/main.3294b9a3.chunk.css.map": "/make-your-trip/static/css/main.3294b9a3.chunk.css.map",
     "static/js/2.2ece0de4.chunk.js.LICENSE.txt": "/make-your-trip/static/js/2.2ece0de4.chunk.js.LICENSE.txt",
     "static/media/App.css": "/make-your-trip/static/media/Poppins-SemiBold.cce5625b.ttf",
     "static/media/avatar.3175b6aa.jfif": "/make-your-trip/static/media/avatar.3175b6aa.jfif",
@@ -27,7 +27,7 @@
     "static/js/runtime-main.8b0b8fc8.js",
     "static/css/2.91a46da2.chunk.css",
     "static/js/2.2ece0de4.chunk.js",
-    "static/css/main.0ca47a51.chunk.css",
+    "static/css/main.3294b9a3.chunk.css",
     "static/js/main.f76a3b09.chunk.js"
   ]
 }
