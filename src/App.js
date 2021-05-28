@@ -6,6 +6,7 @@ import DisplayCities from './display_cities';
 import { Route, Switch } from 'react-router-dom';
 import Test from './test';
 import SignUpForm from './sign_up_form';
+import ContactUs from './contact_us';
 import BrowserRouter from 'react-router-dom/BrowserRouter';
 
 class App extends React.Component {
@@ -24,6 +25,7 @@ class App extends React.Component {
               <Route exact path="/signup" component={SignUpForm} />
               <Route exact path="/test" component={Test} />
               <Route exact path="/happyusers" component={HappyUsers} />
+              <Route exact path="/contactus" component={ContactUs} />
             </Switch>
           </div>
         </BrowserRouter>

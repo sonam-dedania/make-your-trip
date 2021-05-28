@@ -203,6 +203,59 @@
   border: solid 2px #CDCDCD;
   margin-top: 5px;
 }
+.contactus-form
+{
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: #fff;
+  top: -118px;
+  position: relative;
+}
+.contactus-send-message-title
+{
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.contactus-name-input:focus
+{
+  border:  2px solid #FF5A54 !important; 
+  outline: none!important;
+}
+.contactus-email-input:focus
+{
+  border:  2px solid #FF5A54 !important; 
+  outline: none!important;
+}
+.contactus-message-input:focus
+{
+  border:  2px solid #FF5A54 !important; 
+  outline: none!important;
+}
+.contactus-name-input
+{
+  width: 100%;
+  padding: 9px 15px 10px 10px;
+  border-radius: 6px;
+  border: solid 2px #CDCDCD;
+  margin-top: 5px;
+}
+.contactus-email-input
+{
+  width: 100%;
+  padding: 9px 15px 10px 10px;
+  border-radius: 6px;
+  border: solid 2px #CDCDCD;
+  margin-top: 5px;
+}
+.contactus-message-input
+{
+  width: 100%;
+  padding: 9px 15px 10px 10px;
+  border-radius: 6px;
+  border: solid 2px #CDCDCD;
+  margin-top: 5px;
+}
 .DOB-input
 {
   width: 100%;
@@ -462,7 +515,237 @@ input[type="radio"]:checked:after
 {
   margin-top: 15px!important;
   border: solid 0.1px #adadad;
-  
+}
+.location-container
+{
+  display: inline-block;
+}
+.contactus-address-wrapper
+{
+  display: inline;
+  margin-top: 8px;
+  float: left;
+}
+.contactus-title
+{
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #fff;
+  margin-left: 50px;
+  font-family: poppins-regular;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+.textarea-message
+{
+  width: 100%;
+  padding: 9px 15px 10px 10px;
+  border-radius: 6px;
+  border: solid 2px #CDCDCD;
+  margin-top: 5px;
+}
+.first-user
+{
+  height: 200px;
+  width: 200px;
+  position: relative;
+  left: -19px;
+  top: -29px;
+  border-radius: 0px 0px 100px 0px;
+}
+.second-user
+{
+  border-radius:0px 0px 0px 87px;
+  height: 160px;
+  width: 160px;
+  position: relative;
+  left: -10px;
+  top: -18px;
+}
+.third-user
+{
+  border-radius:0px 0px 121px 104px;
+  height: 130px;
+  width: 130px;
+  position: relative;
+  left: -2px;
+  top: -10px;
+}
+.fourth-user
+{
+  border-radius:0px 0px 55px 68px;
+  height: 120px;
+  width: 120px;
+  position: relative;
+  left: -9px;
+  top: -10px;
+}
+.first-user-container
+{
+  background-color: #00B374;
+  width: 170px;
+  height: 170px;
+  margin-left: 312px;
+  margin-top: -225px;
+  position: relative;
+  border-radius: 90px 90px 90px 0px;
+}
+.second-user-container
+{
+  background-color: #00AADC;
+  width: 140px;
+  height: 140px;
+  margin-left: 133px;
+  margin-top: -39px;
+  position: relative;
+  border-radius: 70px 70px 0px 70px;
+}
+.third-user-container
+{
+  background-color: #DE004B;
+  width: 120px;
+  height: 120px;
+  margin-left: 355px;
+  margin-top: -104px;
+  position: relative;
+  border-radius: 60px 0px 60px 60px;
+}
+.fourth-user-container
+{
+  background-color: #E9AE00;
+  width: 110px;
+  height: 110px;
+  position: relative;  
+  margin-left: 215px;
+  margin-top: -48px;
+  border-radius: 0px 60px 60px 60px;
+}
+.heart-img
+{
+  height: 70px;
+  position: relative;
+  top: -127px;  
+  left: 211px;
+}
+.wave-wrapper
+{
+  width: 80px;
+  border-radius: 60px 60px 60px 60px;
+  height: 50px;
+  text-align: center;
+  padding-top: 5px; 
+  font-size: 25px;
+  position: relative;
+  background-color: #F5F4F5;
+  z-index: 1;
+  left: 296px;  
+  top: -32px;
+}
+.imoji2-img
+{
+  position: relative;
+  height: 38px;
+  left: 328px;
+  top: 53px;
+}
+.textarea-message:focus
+{
+  border:  2px solid #FF5A54 !important; 
+  outline: none!important;
+}
+.contactus-header
+{
+  height: 250px;
+  position: relative;
+  font-family: poppins-regular;
+  background-color:#F97071;
+  margin-top: 30px;
+}
+.contactus-body-part
+{
+  background-color: #f7f7f7;
+  padding: 50px;
+  height: 440px;
+}
+.contactus-email-wrapper
+{
+  margin-top: 8px;
+  display: inline;
+  float: left;
+}
+.contactus-left-container
+{
+  margin-left: 40px;
+}
+.contactus-email-container
+{
+  padding: 10px;
+  border-radius: 50px;
+  height: 40px;
+  display: inline;
+  float: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  background-color: #fff;
+  text-align: center;
+  width: 40px;
+}
+.icon-location
+{
+  color: #F97071;
+  vertical-align: super;
+}
+.contactus-address
+{
+  font-size: 13px;
+}
+.contactus-address-label
+{
+  font-weight: bold;
+}
+.contactus-email-label
+{
+  font-weight: bold;
+}
+.contactus-email
+{
+  font-size: 13px;
+}
+.icon-contactus-email
+{
+  vertical-align: super;
+  color: #F97071;
+}
+.contactus-left-address-wrapper
+{
+  margin-left: 30px;
+}
+.contactus-right-email-wrapper
+{
+  margin-left: -300px;
+}
+.location-container
+{
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 50px;
+  background-color: #fff;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+  display: inline;
+  float: left;
+}
+ .hr-top2
+{
+  margin-top: -40px!important;
+  border: solid 0.1px #adadad;
 }
 .body-part
 {
@@ -851,6 +1134,11 @@ input[type="radio"]:checked:after
 {
   margin-top: 30px;
 }
+.contactus-logo
+{
+  margin-left: 45px;
+  margin-top: 25px;
+}
 .trip-logo
 {
   color: #fff;
@@ -1189,7 +1477,44 @@ outline: none!important;
   color: #F97071;
   font-size: 30px!important;
 }
-
+@media (max-width: 1245px)
+{
+  .contactus-right-email-wrapper
+  {
+    margin-left: -250px;
+  }
+}
+@media (max-width: 1138px)
+{
+  .contactus-right-email-wrapper
+  {
+    margin-left: -150px;
+  }
+}
+@media (max-width: 950px)
+{
+  .contactus-right-email-wrapper
+  {
+    margin-left: -100px;
+  }
+}
+@media (max-width: 841px)
+{
+  .contactus-right-email-wrapper
+  {
+    margin-left: 30px;
+  }
+  .contactus-header {
+    height: 300px;
+  }
+}
+@media (max-width: 1100px)
+{
+  .contactus-right-container
+  {
+    display: none;
+  }
+}
 @media (max-width: 992px)
 {
   .date
@@ -1230,6 +1555,23 @@ outline: none!important;
     margin: 0px;
     border-radius: 0px;
     min-height: 100vh;
+  }
+  .contactus-body-part
+{
+  padding: 10px;
+}
+.contactus-form {
+  margin-top: 50px;
+}
+.contactus-left-container {
+  margin-left: 0px;
+}
+  .gry1-container
+  {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   .right-col
 {
