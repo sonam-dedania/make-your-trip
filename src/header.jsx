@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import ReactGA from 'react-ga';
 import { Navbar, Nav, Row, Button } from 'react-bootstrap';
 import Logo1 from './logo';
 import { Dropdown, DropdownButton } from 'react-bootstrap';
@@ -17,6 +18,11 @@ class Header extends React.Component {
     }
 
     handleSelect = () => {
+        ReactGA.event({
+            category: 'Header',
+            action: 'Click on Logout Button'
+        });
+
         reactLocalStorage.clear("logindetail");
         window.open("/make-your-trip/", "_self");
     }

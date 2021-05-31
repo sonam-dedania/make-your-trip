@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import ReactGA from 'react-ga';
 import { Dropdown } from 'react-bootstrap';
 import './select_search_style.css';
 import fuzzySearch from './fuzzySearch';
@@ -23,6 +24,12 @@ class CityList extends React.Component {
     }
 
     changeValue = (e) => {
+
+        ReactGA.event({
+            category: 'Home Page',
+            action: 'Select Place form the list'
+        });
+
         this.props.selectedValue(e);
     }
 

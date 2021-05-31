@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import ReactGA from 'react-ga';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import Sun from './Images/sun.png';
@@ -33,6 +34,11 @@ class CityCard extends React.Component {
     }
 
     bookmarkClicked = (index) => {
+        ReactGA.event({
+            category: 'Home Page',
+            action: 'Click on Bookmark Icon'
+        });
+
         let newArray = this.state.cityDetails;
         newArray[index].isBookmark = !newArray[index].isBookmark;
         this.setState({ cityDetails: newArray });

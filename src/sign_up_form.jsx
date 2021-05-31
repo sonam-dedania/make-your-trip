@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col } from 'react-bootstrap';
@@ -102,6 +103,12 @@ class SignUpForm extends React.Component {
     }
 
     submit() {
+
+        ReactGA.event({
+            category: 'Sign Up Page',
+            action: 'Click on Sign Up Button'
+        });
+
         if (this.validate()) {
             const requestOptions = {
                 method: 'POST',

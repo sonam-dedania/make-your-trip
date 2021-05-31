@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import ReactGA from 'react-ga';
 import Header from './header';
 import InfiniteScroll from 'react-infinite-scroller';
 import { reactLocalStorage } from 'reactjs-localstorage';
@@ -61,6 +62,11 @@ class HappyUser extends React.Component {
     }
 
     handleClicked = () => {
+        ReactGA.event({
+            category: 'Happy Users Page',
+            action: 'Click on Filter Button'
+        });
+
         this.setState({ flag: !this.state.flag });
     }
 

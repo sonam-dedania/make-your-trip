@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col } from 'react-bootstrap';
@@ -21,6 +22,12 @@ class LoginPage extends React.Component {
     }
 
     buttonClicked = () => {
+
+        ReactGA.event({
+            category: 'Login Page',
+            action: 'Click on Login Button'
+        });
+
         let isLoggedIn = false;
 
         if (this.state.email === "" || this.state.password === "") {

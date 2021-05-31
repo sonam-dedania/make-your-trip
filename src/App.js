@@ -1,23 +1,25 @@
-import ReactGA from 'react-ga';
-import './App.css';
 import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import BrowserRouter from 'react-router-dom/BrowserRouter';
+import ReactGA from 'react-ga';
+
 import LoginPage from './login_page';
 import HappyUsers from './happy_users';
 import DisplayCities from './display_cities';
-import { Route, Switch } from 'react-router-dom';
 import Test from './test';
 import SignUpForm from './sign_up_form';
 import ContactUs from './contact_us';
-import BrowserRouter from 'react-router-dom/BrowserRouter';
+
+import './App.css';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  initializeReactGA() {
-    ReactGA.initialize('UA-123791717-1');
-    ReactGA.pageview('/homepage');
+  componentDidMount() {
+    ReactGA.initialize('UA-198245490-1');
+    ReactGA.pageview(window.location.pathname);
   }
 
   render() {
