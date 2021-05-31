@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/make-your-trip/static/css/main.15984db4.chunk.css",
-    "main.js": "/make-your-trip/static/js/main.221ed892.chunk.js",
-    "main.js.map": "/make-your-trip/static/js/main.221ed892.chunk.js.map",
+    "main.css": "/make-your-trip/static/css/main.ed33b7ce.chunk.css",
+    "main.js": "/make-your-trip/static/js/main.001549ec.chunk.js",
+    "main.js.map": "/make-your-trip/static/js/main.001549ec.chunk.js.map",
     "runtime-main.js": "/make-your-trip/static/js/runtime-main.5a8e38dc.js",
     "runtime-main.js.map": "/make-your-trip/static/js/runtime-main.5a8e38dc.js.map",
     "static/css/2.91a46da2.chunk.css": "/make-your-trip/static/css/2.91a46da2.chunk.css",
-    "static/js/2.47d0d8f5.chunk.js": "/make-your-trip/static/js/2.47d0d8f5.chunk.js",
-    "static/js/2.47d0d8f5.chunk.js.map": "/make-your-trip/static/js/2.47d0d8f5.chunk.js.map",
+    "static/js/2.1ce50832.chunk.js": "/make-your-trip/static/js/2.1ce50832.chunk.js",
+    "static/js/2.1ce50832.chunk.js.map": "/make-your-trip/static/js/2.1ce50832.chunk.js.map",
     "static/js/3.39c8b371.chunk.js": "/make-your-trip/static/js/3.39c8b371.chunk.js",
     "static/js/3.39c8b371.chunk.js.map": "/make-your-trip/static/js/3.39c8b371.chunk.js.map",
     "index.html": "/make-your-trip/index.html",
     "static/css/2.91a46da2.chunk.css.map": "/make-your-trip/static/css/2.91a46da2.chunk.css.map",
-    "static/css/main.15984db4.chunk.css.map": "/make-your-trip/static/css/main.15984db4.chunk.css.map",
-    "static/js/2.47d0d8f5.chunk.js.LICENSE.txt": "/make-your-trip/static/js/2.47d0d8f5.chunk.js.LICENSE.txt",
+    "static/css/main.ed33b7ce.chunk.css.map": "/make-your-trip/static/css/main.ed33b7ce.chunk.css.map",
+    "static/js/2.1ce50832.chunk.js.LICENSE.txt": "/make-your-trip/static/js/2.1ce50832.chunk.js.LICENSE.txt",
     "static/media/App.css": "/make-your-trip/static/media/Poppins-SemiBold.cce5625b.ttf",
     "static/media/avatar.3175b6aa.jfif": "/make-your-trip/static/media/avatar.3175b6aa.jfif",
     "static/media/font-awesome.min.css": "/make-your-trip/static/media/fontawesome-webfont.f691f37e.woff",
@@ -26,8 +26,8 @@
   "entrypoints": [
     "static/js/runtime-main.5a8e38dc.js",
     "static/css/2.91a46da2.chunk.css",
-    "static/js/2.47d0d8f5.chunk.js",
-    "static/css/main.15984db4.chunk.css",
-    "static/js/main.221ed892.chunk.js"
+    "static/js/2.1ce50832.chunk.js",
+    "static/css/main.ed33b7ce.chunk.css",
+    "static/js/main.001549ec.chunk.js"
   ]
 }
