@@ -1,9 +1,10 @@
 import React from 'react';
+
+import fuzzySearch from './fuzzySearch';
+import SelectSearch from 'react-select-search';
+
 import './App.css';
 import './select_search_style.css';
-import fuzzySearch from './fuzzySearch';
-
-import SelectSearch from 'react-select-search';
 
 class Test extends React.Component {
     constructor(props) {

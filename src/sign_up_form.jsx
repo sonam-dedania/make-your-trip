@@ -223,11 +223,6 @@ class SignUpForm extends React.Component {
                                         enableSearch="true"
 
                                     />
-
-                                    {/* <div className="email-div">
-                                        <i class="fa fa-phone email-icon" aria-hidden="true"></i>
-                                    </div>
-                                    <input type="text" name="mobileno" id="mobileno" value={this.state.mobileno} className="mobile-input" onChange={this.handleInputChange} /> */}
                                     <div className="error-msg">{this.state.mobilenoError}</div>
                                 </div>
 

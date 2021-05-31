@@ -319,16 +319,6 @@
   border:  2px solid #FF5A54 !important; 
   outline: none!important;
 }
-/* .email-div
-{
-  width: 30px;
-  height: 39px;
-  background-color: #fff !important;
-  position: absolute;
-  top: 24px;
-  border: solid 2px #CDCDCD;
-  border-radius: 6px;
-}  */
 .password-input:focus
 {
   border: solid 2px #FF5A54; 
@@ -508,11 +498,6 @@ input[type="radio"]:checked:after
 .hr-top
 {
   margin-top: -9px!important;
-  border: solid 0.1px #adadad;
-}
-.hr-top1
-{
-  margin-top: 15px!important;
   border: solid 0.1px #adadad;
 }
 .location-container
@@ -747,11 +732,6 @@ input[type="radio"]:checked:after
   display: inline;
   float: left;
 }
- .hr-top2
-{
-  margin-top: -40px!important;
-  border: solid 0.1px #adadad;
-}
 .body-part
 {
   padding-left: 50px;
@@ -775,14 +755,12 @@ input[type="radio"]:checked:after
 }
 .select-date-title
 {
-  /* margin-top: -18px; */
   color: #ADADAD!important;
   margin-left: -20px;
   font-size: 12px!important;
 }
 .any-date-para
 {
-  /* margin-top: -40px; */
   font-size: 13px!important;
   color:#000000;
   font-weight: bold;
@@ -875,23 +853,6 @@ input[type="radio"]:checked:after
   float: right;
   margin-top: 25px;
 }
-.dropdown1
-{
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border-right: solid 0.1px #adadad;
-  padding-left: 5px;
-  padding-right: 8px;
-}
-.dropdown2
-{
-  padding-left: 10px;
-  padding-right: 8px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background-color: transparent!important;
-}
-
 .days-dropdown button
 {
   background-color: transparent!important;
@@ -949,15 +910,6 @@ input[type="radio"]:checked:after
 .days-dropdown button::after
 {
   border: 0px!important;
-}
-
-.dropdown3
-{
-  padding-left: 5px;
-  padding-right: 8px;
-  border-right: solid 0.1px #adadad;
-  padding-top: 5px;
-  padding-bottom: 5px;
 }
 .dropdown-items
 {
@@ -1135,7 +1087,6 @@ input[type="radio"]:checked:after
   text-decoration: underline;
   color: #F97071;  
 }
-
 .signup-form-container
 {
   margin-top: 30px;
@@ -1217,12 +1168,10 @@ outline: none!important;
 {
   border: none;
   background-color: transparent;
-  /* width: 80%; */
   position: relative;
   margin-top: 15px;
   font-size: 13px;
   font-weight: bold;
-  /* margin-left: 39px; */
   display: inline-block;
   height: 36px;
   z-index: 5;
@@ -1321,14 +1270,12 @@ outline: none!important;
   display: inline-block;
   margin-left: 10px;
 }
-
 .or {
   display:flex;
   justify-content:center;
   align-items: center;
   color:#CDCDCD;
 }
-
 .or:after,
 .or:before {
     content: "";
@@ -1345,7 +1292,6 @@ outline: none!important;
 {
   margin-left: 10px;
 }
-
 .react-datepicker-wrapper{
   position: relative;
   top: -25px;
@@ -1469,8 +1415,7 @@ outline: none!important;
   font-weight: bold;
   text-align: center;
   font-size: 30px;
-  /* position: fixed; */
-  bottom: 0px;
+   bottom: 0px;
   width: 100%;
 }
 .icon-female
