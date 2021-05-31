@@ -21,15 +21,12 @@ class HappyUser extends React.Component {
     }
 
     loadFunc = () => {
-        console.log("load function");
         let url = "https://randomuser.me/api/?results=20&offset=0";
         if (this.state.checkedMale) {
-            console.log("male");
             url = url + "&gender=male";
         }
 
         if (this.state.checkedFemale) {
-            console.log("female");
             url = url + "&gender=female";
         }
 
@@ -79,7 +76,7 @@ class HappyUser extends React.Component {
 
             items.push(<div className="user-info-container">
                 <div className="user-profile">
-                    <img className="user-profile-img" src={user.picture.large} />
+                    <img className="user-profile-img" src={user.picture.large} alt="user-profile-img" />
                 </div>
                 <div className="user-name">
                     <div classNaxme="label">Name</div>
@@ -95,8 +92,8 @@ class HappyUser extends React.Component {
                 </div>
                 <div className="email-info">
                     <div className="label">Contact</div>
-                    <div className="user-email bold" title={user.email}><i class="fa fa-envelope icon-envelope" aria-hidden="true"></i> {user.email}</div>
-                    <div className="phone bold"><i class="fa fa-phone-square icon-phone" aria-hidden="true"></i> {user.phone}</div>
+                    <div className="user-email bold" title={user.email}><i className="fa fa-envelope icon-envelope" aria-hidden="true"></i> {user.email}</div>
+                    <div className="phone bold"><i className="fa fa-phone-square icon-phone" aria-hidden="true"></i> {user.phone}</div>
                 </div>
                 <div className="city-info">
                     <div className="label">City/Country</div>
@@ -104,6 +101,7 @@ class HappyUser extends React.Component {
                 </div>
             </div>
             );
+            return true;
         })
 
         return (
@@ -120,16 +118,16 @@ class HappyUser extends React.Component {
                             <div className="body-part">
                                 <h1 className="happy-user-title">Happy User</h1>
                                 <div className="filter-happyuser">
-                                    <Button className="btn filter-btn" onClick={this.handleClicked}><i class="fa fa-sliders icon-slider-happyuser" aria-hidden="true"></i></Button>
+                                    <Button className="btn filter-btn" onClick={this.handleClicked}><i className="fa fa-sliders icon-slider-happyuser" aria-hidden="true"></i></Button>
                                 </div>
                                 <div className={`filter-hide-show-wrapper ${(this.state.flag === false) ? 'hidden' : ''}`}>
                                     < div className="male-checkbox-wrapper">
                                         <input type="checkbox" checked={this.state.checkedMale} className="male-checkbox" onChange={this.handleMaleCheckboxChange} />
-                                        Male <i class="fa fa-male icon-male-hide-show" aria-hidden="true"></i>
+                                        Male <i className="fa fa-male icon-male-hide-show" aria-hidden="true"></i>
                                     </div>
                                     <div className="female-checkbox-wrapper">
                                         <input type="checkbox" checked={this.state.checkedFemale} className="female-checkbox" onChange={this.handleFemaleCheckboxChange} />
-                                        Female <i class="fa fa-female icon-female-hide-show" aria-hidden="true"></i>
+                                        Female <i className="fa fa-female icon-female-hide-show" aria-hidden="true"></i>
                                     </div>
                                 </div>
                                 {items}

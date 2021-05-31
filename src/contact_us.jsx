@@ -13,9 +13,6 @@ import Imoji from './Images/imoji.png';
 import './App.css';
 
 class ContactUs extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (

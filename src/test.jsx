@@ -7,9 +7,6 @@ import './App.css';
 import './select_search_style.css';
 
 class Test extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         const options = [

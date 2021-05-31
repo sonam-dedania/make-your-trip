@@ -53,13 +53,11 @@ class LoginPage extends React.Component {
             fetch('https://zuru-todo-api.herokuapp.com/users/login', requestOptions)
                 .then(response => response.json())
                 .then((result) => {
-                    //ToDo
-                    console.log('res', result);
                     if (result.id) {
                         isLoggedIn = true;
                         reactLocalStorage.set("logindetail", isLoggedIn);
-                        this.state.email = "";
-                        this.state.password = "";
+                        this.setState({ email: "" });
+                        this.setState({ password: "" });
                         window.open("/make-your-trip/home", "_self");
                     }
                     else {
@@ -76,7 +74,6 @@ class LoginPage extends React.Component {
 
     componentDidMount = () => {
         let l = reactLocalStorage.get("logindetail");
-        console.log("localstorage data", l);
         if (l === "true") {
             window.open("/make-your-trip/home", "_self");
         }
@@ -109,10 +106,10 @@ class LoginPage extends React.Component {
                                     </Col>
                                     <Col lg={6} md={6} sm={6} xs={6}>
                                         <div className="d-none d-sm-block">
-                                            <Button className="btn facebook-btn"><div className="fb-div"><i class="fa fa-facebook fb-icon" aria-hidden="true"></i></div> &#x2002;Sign up with Facebook</Button>
+                                            <Button className="btn facebook-btn"><div className="fb-div"><i className="fa fa-facebook fb-icon" aria-hidden="true"></i></div> &#x2002;Sign up with Facebook</Button>
                                         </div>
                                         <div className="d-block d-sm-none">
-                                            <Button className="btn hidden-facebook-btn"><div className="fb-div"><i class="fa fa-facebook fb-icon" aria-hidden="true"></i></div></Button>
+                                            <Button className="btn hidden-facebook-btn"><div className="fb-div"><i className="fa fa-facebook fb-icon" aria-hidden="true"></i></div></Button>
                                         </div>
                                     </Col>
                                 </Row>
@@ -121,13 +118,13 @@ class LoginPage extends React.Component {
                                 <div className="email-container">
                                     <label>Email address</label><br />
                                     <div className="email-div">
-                                        <i class="fa fa-envelope-o email-icon" aria-hidden="true"></i>
+                                        <i className="fa fa-envelope-o email-icon" aria-hidden="true"></i>
                                     </div>
                                     <input type="email" id="email" value={this.state.email} className="email-input" onChange={(e) => this.setState({ email: e.target.value })} />
                                 </div>
                                 <div className="password-container">
                                     <label>Password</label><br />
-                                    <i class="fa fa-lock password-icon" aria-hidden="true"></i>
+                                    <i className="fa fa-lock password-icon" aria-hidden="true"></i>
                                     <input type="password" id="password" value={this.state.password} className="password-input" onChange={(e) => this.setState({ password: e.target.value })} />
                                 </div>
                                 <div className="agree-para"><input type="checkbox" /> &#x2002;<span className="gry">I agree to Platform's</span> <span className="org">Terms of Service</span> <span className="gry">and</span> <span className="org">Privacy Policy</span></div>

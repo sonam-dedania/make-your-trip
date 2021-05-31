@@ -32,6 +32,10 @@ class SignUpForm extends React.Component {
         };
     }
 
+    componentDidMount() {
+        // 
+    }
+
     handleDateChange = (date) => {
         this.setState({ DOB: date });
     }
@@ -72,7 +76,7 @@ class SignUpForm extends React.Component {
             usernameError = "";
         }
 
-        const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        const reg = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\w{2,3})+$/;
         if (!this.state.email) {
             emailError = "Email field is required";
         }
@@ -134,8 +138,6 @@ class SignUpForm extends React.Component {
             fetch('https://zuru-todo-api.herokuapp.com/users/register', requestOptions)
                 .then(response => response.json())
                 .then((result) => {
-                    //ToDo
-                    console.log('res', result);
                     if (result.id) {
                         Swal.fire({
                             icon: 'success',
@@ -177,7 +179,7 @@ class SignUpForm extends React.Component {
                                 <div className="email-container">
                                     <label>Username</label>
                                     <div className="email-div">
-                                        <i class="fa fa-user email-icon" aria-hidden="true"></i>
+                                        <i className="fa fa-user email-icon" aria-hidden="true"></i>
                                     </div>
                                     <input type="text" name="username" id="username" value={this.state.username} className="username-input" onChange={this.handleInputChange} />
                                     <div className="error-msg">{this.state.usernameError}</div>
@@ -186,14 +188,14 @@ class SignUpForm extends React.Component {
                                 <div className="email-container">
                                     <label>Email address</label><br />
                                     <div className="email-div">
-                                        <i class="fa fa-envelope-o email-icon" aria-hidden="true"></i>
+                                        <i className="fa fa-envelope-o email-icon" aria-hidden="true"></i>
                                     </div>
                                     <input type="email" name="email" id="email" value={this.state.email} className="email-input" onChange={this.handleInputChange} />
                                     <div className="error-msg">{this.state.emailError}</div>
                                 </div>
                                 <div className="password-container">
                                     <label>Password</label><br />
-                                    <i class="fa fa-lock password-icon" aria-hidden="true"></i>
+                                    <i className="fa fa-lock password-icon" aria-hidden="true"></i>
                                     <input type="password" name="password" id="password" value={this.state.password} className="password-input" onChange={this.handleInputChange} />
                                     <div className="error-msg">{this.state.passwordError}</div>
                                 </div>

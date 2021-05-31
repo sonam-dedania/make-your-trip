@@ -11,9 +11,6 @@ import Avatar from './Images/avatar.jfif';
 
 import './App.css';
 class Header extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     handleSelect = () => {
         ReactGA.event({
@@ -63,7 +60,7 @@ class Header extends React.Component {
                         <div className="right-menubar d-none d-lg-block"><b>SAVED OFFERS</b></div>
                         {this.props.showBookmark &&
                             <>
-                                <i class="fa fa-bookmark-o total-count-icon-bookmark d-none d-lg-block" aria-hidden="true"></i>
+                                <i className="fa fa-bookmark-o total-count-icon-bookmark d-none d-lg-block" aria-hidden="true"></i>
                                 <span className="sup-data d-none d-lg-block"><sup>{this.props.counter}</sup></span>&#x2003;
                             </>
                         }

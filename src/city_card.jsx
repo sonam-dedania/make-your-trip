@@ -31,6 +31,7 @@ class CityCard extends React.Component {
             if (city.isBookmark === true) {
                 count = count + 1;
             }
+            return true;
         })
         this.props.bookmarkcount(count);
     }

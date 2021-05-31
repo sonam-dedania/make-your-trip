@@ -17,9 +17,8 @@ class CityList extends React.Component {
         fetch("https://raw.githubusercontent.com/Dipen-Dedania/static-data/main/india-popular-city.json").then(function (response) {
             return response.json();
         }).then((result) => {
-            result.city.map((city) => {
-                city.value = city.name;
-            });
+            result.city.map((city) => (
+                city.value = city.name));
             this.setState({ cities: result.city });
         });
     }

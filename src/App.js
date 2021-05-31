@@ -1,6 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import BrowserRouter from 'react-router-dom/BrowserRouter';
+import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
 import LoginPage from './login_page';
@@ -13,9 +12,6 @@ import ContactUs from './contact_us';
 import './App.css';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentDidMount() {
     ReactGA.initialize('UA-198245490-1');

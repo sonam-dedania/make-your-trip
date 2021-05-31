@@ -85,19 +85,19 @@ class DisplayCities extends React.Component {
                                     <div className="select-dropdown">
                                         <p className="all-place-para">Select Place</p>
                                         <div className="city-list">
-                                            <CityList selectedValue={this.selectedValue} /><i class="fa fa-sort-desc select-place-icon-sort" aria-hidden="true"></i>
+                                            <CityList selectedValue={this.selectedValue} /><i className="fa fa-sort-desc select-place-icon-sort" aria-hidden="true"></i>
                                         </div>
                                     </div>
                                     <div className="select-dropdown">
                                         <p className="all-place-para">How Many Days?</p>
-                                        <TourDaysList /><i class="fa fa-sort-desc how-many-days-icon-sort" aria-hidden="true"></i>
+                                        <TourDaysList /><i className="fa fa-sort-desc how-many-days-icon-sort" aria-hidden="true"></i>
                                     </div>
                                     <div className="dropdown-border-right">
                                         <div className="any-date">
                                             <div className="select-date-title">Select Date</div>
                                             {!this.state.startDate &&
                                                 <div className="any-date-para">Any date
-                                                <i class="fa fa-sort-desc icon-sort" aria-hidden="true"></i>
+                                                <i className="fa fa-sort-desc icon-sort" aria-hidden="true"></i>
                                                 </div>
                                             }
                                         </div>
@@ -107,10 +107,10 @@ class DisplayCities extends React.Component {
                                             onChange={this.changeDate} />
                                     </div>
                                     <div className="filter-div">
-                                        <Button className="btn sort-btn"><i class="fa fa-sliders icon-slider" aria-hidden="true"></i></Button>
+                                        <Button className="btn sort-btn"><i className="fa fa-sliders icon-slider" aria-hidden="true"></i></Button>
                                     </div>
                                     <div className="go-btn-div">
-                                        <Button className="btn go-btn"><i class="fa fa-search icon-search" aria-hidden="true"></i> Go!</Button>
+                                        <Button className="btn go-btn"><i className="fa fa-search icon-search" aria-hidden="true"></i> Go!</Button>
                                     </div>
                                 </div>
                             </Col>
