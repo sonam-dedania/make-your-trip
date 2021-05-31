@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga';
 import './App.css';
 import React from 'react';
 import LoginPage from './login_page';
@@ -12,6 +13,11 @@ import BrowserRouter from 'react-router-dom/BrowserRouter';
 class App extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  initializeReactGA() {
+    ReactGA.initialize('UA-123791717-1');
+    ReactGA.pageview('/homepage');
   }
 
   render() {

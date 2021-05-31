@@ -207,9 +207,8 @@
 {
   padding: 20px;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: -107px;
   background-color: #fff;
-  top: -118px;
   position: relative;
 }
 .contactus-send-message-title
@@ -637,7 +636,7 @@ input[type="radio"]:checked:after
   padding-top: 5px; 
   font-size: 25px;
   position: relative;
-  background-color: #F5F4F5;
+  background-color: #eeeeee;
   z-index: 1;
   left: 296px;  
   top: -32px;
@@ -666,7 +665,7 @@ input[type="radio"]:checked:after
 {
   background-color: #f7f7f7;
   padding: 50px;
-  height: 440px;
+  height: 400px;
 }
 .contactus-email-wrapper
 {
@@ -697,27 +696,33 @@ input[type="radio"]:checked:after
 {
   color: #F97071;
   vertical-align: super;
+  margin-top: 2px;
 }
 .contactus-address
 {
   font-size: 13px;
+  color: #efeeee;
 }
 .contactus-address-label
 {
   font-weight: bold;
+  color: #fff;
 }
 .contactus-email-label
 {
   font-weight: bold;
+  color: #fff;
 }
 .contactus-email
 {
+  color: #efeeee;
   font-size: 13px;
 }
 .icon-contactus-email
 {
   vertical-align: super;
   color: #F97071;
+  margin-top: 2px;
 }
 .contactus-left-address-wrapper
 {
@@ -1001,6 +1006,7 @@ input[type="radio"]:checked:after
   padding: 20px;
   background-color: #ffffff;
   border-radius: 10px;
+  box-shadow: 0px 0px 8px 0px #cdcdcd;
   margin-top: 40px;
 }
 .city-name
@@ -1497,6 +1503,10 @@ outline: none!important;
   {
     margin-left: -100px;
   }
+  .contactus-body-part
+  {
+    height: 398px;
+  }
 }
 @media (max-width: 841px)
 {
@@ -1559,9 +1569,14 @@ outline: none!important;
   .contactus-body-part
 {
   padding: 10px;
+  height: 398px;
+}
+.trip-logo
+{
+  margin-top: 0px;
 }
 .contactus-form {
-  margin-top: 50px;
+  margin-top: -64px;
 }
 .contactus-left-container {
   margin-left: 0px;
