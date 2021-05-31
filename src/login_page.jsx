@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactGA from 'react-ga';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-import Google from './Images/google.png';
-import Home from './Images/home.svg';
-import 'font-awesome/css/font-awesome.min.css';
-import Logo from './logo';
 import { reactLocalStorage } from 'reactjs-localstorage';
 import Swal from 'sweetalert2';
 
+import Google from './Images/google.png';
+import Home from './Images/home.svg';
+import Logo from './logo';
+
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css';
 class LoginPage extends React.Component {
     constructor(props) {
         super(props);
@@ -19,6 +20,13 @@ class LoginPage extends React.Component {
             password: "",
             errormsg: ""
         };
+    }
+
+    signupLinkClicked = () => {
+        ReactGA.event({
+            category: 'Login Page',
+            action: 'Click on Sign up link'
+        });
     }
 
     buttonClicked = () => {
@@ -88,7 +96,7 @@ class LoginPage extends React.Component {
                         </div>
                         <Col lg={6} md={12} sm={12} xs={12} className="right-col">
                             <h3 className="h3-header"><b>Get's started.</b></h3>
-                            <p className="normal-para"><span className="gry">New User?</span> <a className="signup-link" href="/make-your-trip/signup"><span className="org">Sign up</span></a></p>
+                            <p className="normal-para"><span className="gry">New User?</span> <a className="signup-link" href="/make-your-trip/signup" onClick={this.signupLinkClicked}><span className="org">Sign up</span></a></p>
                             <div className="login-form-container">
                                 <Row>
                                     <Col lg={6} md={6} sm={6} xs={6}>
@@ -96,7 +104,7 @@ class LoginPage extends React.Component {
                                             <Button className="btn google-btn"><img src={Google} alt="google.png" /> &#x2002;Sign up with Google</Button>
                                         </div>
                                         <div className="d-block d-sm-none">
-                                            <Button className="btn google-btn1"><img src={Google} alt="google.png" /></Button>
+                                            <Button className="btn hidden-google-btn"><img src={Google} alt="google.png" /></Button>
                                         </div>
                                     </Col>
                                     <Col lg={6} md={6} sm={6} xs={6}>
@@ -104,12 +112,12 @@ class LoginPage extends React.Component {
                                             <Button className="btn facebook-btn"><div className="fb-div"><i class="fa fa-facebook fb-icon" aria-hidden="true"></i></div> &#x2002;Sign up with Facebook</Button>
                                         </div>
                                         <div className="d-block d-sm-none">
-                                            <Button className="btn facebook-btn1"><div className="fb-div"><i class="fa fa-facebook fb-icon" aria-hidden="true"></i></div></Button>
+                                            <Button className="btn hidden-facebook-btn"><div className="fb-div"><i class="fa fa-facebook fb-icon" aria-hidden="true"></i></div></Button>
                                         </div>
                                     </Col>
                                 </Row>
 
-                                <div className="normal-para1 gry or">or</div>
+                                <div className="or-para gry or">or</div>
                                 <div className="email-container">
                                     <label>Email address</label><br />
                                     <div className="email-div">

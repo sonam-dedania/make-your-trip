@@ -1,10 +1,11 @@
 import React from 'react';
-import './App.css';
 import ReactGA from 'react-ga';
-import { Dropdown } from 'react-bootstrap';
-import './select_search_style.css';
+
 import fuzzySearch from './fuzzySearch';
 import SelectSearch from 'react-select-search';
+
+import './select_search_style.css';
+import './App.css';
 
 class CityList extends React.Component {
     constructor(props) {
@@ -27,7 +28,8 @@ class CityList extends React.Component {
 
         ReactGA.event({
             category: 'Home Page',
-            action: 'Select Place form the list'
+            action: 'Select Place from the list',
+            label: e
         });
 
         this.props.selectedValue(e);

@@ -1,7 +1,8 @@
 import React from 'react';
-import './App.css';
+
 import Cloud from './Images/cloud.png';
 
+import './App.css';
 class CitiesWeather extends React.Component {
     constructor(props) {
         super(props);

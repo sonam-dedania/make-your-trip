@@ -1,39 +1,41 @@
 import React from 'react';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'font-awesome/css/font-awesome.min.css';
 import { Row, Button } from 'react-bootstrap';
-import Header from './header';
 import { Col } from 'react-bootstrap';
+import { reactLocalStorage } from 'reactjs-localstorage';
+
+import Header from './header';
 import CityCard from './city_card';
 import DatePicker from 'react-datepicker';
-import { reactLocalStorage } from 'reactjs-localstorage';
 import CitiesWeather from './cities_weather';
 import TourDaysList from './tour_days_list';
 import CityList from './city_list';
+
+import './App.css';
 import "react-datepicker/dist/react-datepicker.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css';
 
 class DisplayCities extends React.Component {
     constructor(props) {
         super(props);
 
         var currentDate = new Date();
-        var date1 = currentDate.getDate();
-        var month1 = currentDate.getMonth();
+        var getDate = currentDate.getDate();
+        var getMonth = currentDate.getMonth();
         var months = ["January", "February", "March", "April", "May", "June", "July", "Augest", "September", "October", "November", "December"];
-        var month2 = months[month1];
+        var finalMonth = months[getMonth];
 
         var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        var day1 = currentDate.getDay();
+        var getDay = currentDate.getDay();
 
-        var day2 = days[day1];
-        var year1 = currentDate.getFullYear();
+        var finalDay = days[getDay];
+        var getYear = currentDate.getFullYear();
 
         this.state = {
-            date: date1,
-            month: month2,
-            day: day2,
-            year: year1,
+            date: getDate,
+            month: finalMonth,
+            day: finalDay,
+            year: getYear,
             startDate: null,
             selectedCity: "",
             totalCount: 0
@@ -64,7 +66,7 @@ class DisplayCities extends React.Component {
     render() {
         return (
             <div className="gry-container">
-                <div className="gry1-container">
+                <div className="inner-gry-container">
                     <Header counter={this.state.totalCount} showBookmark={true} />
                     <div className="body-part">
                         <Row>
@@ -83,16 +85,16 @@ class DisplayCities extends React.Component {
                                     <div className="select-dropdown">
                                         <p className="all-place-para">Select Place</p>
                                         <div className="city-list">
-                                            <CityList selectedValue={this.selectedValue} /><i class="fa fa-sort-desc icon-sort1" aria-hidden="true"></i>
+                                            <CityList selectedValue={this.selectedValue} /><i class="fa fa-sort-desc select-place-icon-sort" aria-hidden="true"></i>
                                         </div>
                                     </div>
                                     <div className="select-dropdown">
                                         <p className="all-place-para">How Many Days?</p>
-                                        <TourDaysList /><i class="fa fa-sort-desc icon-sort2" aria-hidden="true"></i>
+                                        <TourDaysList /><i class="fa fa-sort-desc how-many-days-icon-sort" aria-hidden="true"></i>
                                     </div>
-                                    <div className="border-right1">
+                                    <div className="dropdown-border-right">
                                         <div className="any-date">
-                                            <div className="select-date1">Select Date</div>
+                                            <div className="select-date-title">Select Date</div>
                                             {!this.state.startDate &&
                                                 <div className="any-date-para">Any date
                                                 <i class="fa fa-sort-desc icon-sort" aria-hidden="true"></i>

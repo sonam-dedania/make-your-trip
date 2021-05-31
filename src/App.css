@@ -68,7 +68,7 @@
   font-family: poppins-regular; 
   font-size: 13px;
 }
-.normal-para1
+.or-para
 {
   font-family: poppins-regular; 
   font-size: 13px;
@@ -94,7 +94,7 @@
   padding-top: 90px!important;
   padding-bottom: 70px!important;
 }
-.facebook-btn1
+.hidden-facebook-btn
 {
   font-size: 11px!important;
   font-weight: bold!important;
@@ -116,7 +116,7 @@
   margin-top: 18px;
   border-radius: 6px!important;
 }
-.google-btn1
+.hidden-google-btn
 {
   width: 100%;
   margin-top: 18px;
@@ -459,7 +459,7 @@ input[type="radio"]:checked:after
   padding-left: 30px;
   padding-right: 30px;
 }
-.gry1-container
+.inner-gry-container
 {
   background: rgb(255,255,255);
   background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 100%);
@@ -475,7 +475,7 @@ input[type="radio"]:checked:after
   font-family: poppins-regular;
   margin-left: 160px;
 }
-.menubar1
+.right-menubar
 {
   font-size:12px;
   margin-right: 20px;
@@ -641,7 +641,7 @@ input[type="radio"]:checked:after
   left: 296px;  
   top: -32px;
 }
-.imoji2-img
+.imoji-img
 {
   position: relative;
   height: 38px;
@@ -773,7 +773,7 @@ input[type="radio"]:checked:after
   margin-top: 11px;
   text-align: center; 
 }
-.select-date1
+.select-date-title
 {
   /* margin-top: -18px; */
   color: #ADADAD!important;
@@ -815,7 +815,7 @@ input[type="radio"]:checked:after
 {
   border-right: 1px solid #ADADAD;
 }
-.border-right1
+.dropdown-border-right
 {
   border-right: 1px solid #ADADAD;
   max-height: 60px;
@@ -1104,7 +1104,7 @@ input[type="radio"]:checked:after
   margin-right: 50px;
   font-family: poppins-regular;
 }
-.icon-bookmark1
+.total-count-icon-bookmark
 {
   margin-top: 28px!important;
   font-size: 18px!important;
@@ -1274,14 +1274,14 @@ outline: none!important;
   display: flex;
   margin-left: 10px;
 }
-.icon-sort1
+.select-place-icon-sort
 {
   margin-left: -25px;
   margin-top: -14px;
   color: #ADADAD!important;
   font-size: 10px!important;
 }
-.icon-sort2
+.how-many-days-icon-sort
 {
   margin-left: 140px;
   margin-top: 63px;
@@ -1460,7 +1460,7 @@ outline: none!important;
   white-space: nowrap;
   width: 180px;
 }
-.loader1
+.infinite-loader
 {
   background-color: #F97071;
   color: #ffffff;
@@ -1581,7 +1581,7 @@ outline: none!important;
 .contactus-left-container {
   margin-left: 0px;
 }
-  .gry1-container
+  .inner-gry-container
   {
     padding-top: 0px;
     padding-bottom: 0px;

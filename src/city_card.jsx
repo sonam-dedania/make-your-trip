@@ -1,10 +1,12 @@
 import React from 'react';
-import './App.css';
 import ReactGA from 'react-ga';
+import { Row, Col, Button } from 'react-bootstrap';
+
+import Sun from './Images/sun.png';
+
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
-import Sun from './Images/sun.png';
-import { Row, Col, Button } from 'react-bootstrap';
 
 class CityCard extends React.Component {
     constructor(props) {

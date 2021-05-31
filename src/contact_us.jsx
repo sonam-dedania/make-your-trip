@@ -1,15 +1,16 @@
 import React from 'react';
-import './App.css';
 import { Col, Row } from 'react-bootstrap';
-import Logo1 from './logo';
+import { Button } from 'react-bootstrap';
+
+import Logo from './logo';
 import User1 from './Images/user1.png';
 import User2 from './Images/user2.png';
 import User3 from './Images/user3.png';
 import User4 from './Images/user4.png';
 import Heart from './Images/heart.png';
-import Imoji2 from './Images/imoji2.png';
-import { Button } from 'react-bootstrap';
+import Imoji from './Images/imoji.png';
 
+import './App.css';
 
 class ContactUs extends React.Component {
     constructor(props) {
@@ -19,9 +20,9 @@ class ContactUs extends React.Component {
     render() {
         return (
             <div className="gry-container">
-                <div className="gry1-container">
+                <div className="inner-gry-container">
                     <div className="contactus-logo">
-                        <Logo1 />
+                        <Logo />
                     </div>
                     <div className="contactus-header">
                         <h1 className="contactus-title">Contact Us</h1>
@@ -88,7 +89,7 @@ class ContactUs extends React.Component {
                                     <div className="third-user-container">
                                         <img src={User1} className="third-user" alt="user3.png" />
                                     </div>
-                                    <img src={Imoji2} className="imoji2-img" alt="imoji2.png" />
+                                    <img src={Imoji} className="imoji-img" alt="imoji.png" />
                                     <div className="fourth-user-container">
                                         <img src={User4} className="fourth-user" alt="user4.png" />
                                     </div>

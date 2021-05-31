@@ -1,16 +1,18 @@
 import React from 'react';
 import ReactGA from 'react-ga';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
+import Swal from 'sweetalert2';
+
 import Home from './Images/home.svg';
 import DatePicker from 'react-datepicker';
-import 'font-awesome/css/font-awesome.min.css';
 import Logo from './logo';
 import PhoneInput from 'react-phone-input-2';
+
+import './App.css';
 import 'react-phone-input-2/lib/style.css';
-import Swal from 'sweetalert2';
+import 'font-awesome/css/font-awesome.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class SignUpForm extends React.Component {
     constructor(props) {
@@ -46,6 +48,13 @@ class SignUpForm extends React.Component {
         let name = e.target.name;
         let value = e.target.value;
         this.setState({ [name]: value });
+    }
+
+    loginLinkClicked = () => {
+        ReactGA.event({
+            category: 'Sign up Page',
+            action: 'Click on Login link'
+        });
     }
 
     validate = () => {
@@ -163,7 +172,7 @@ class SignUpForm extends React.Component {
                         </div>
                         <Col lg={6} md={12} sm={12} xs={12} className="right-col">
                             <h3 className="h3-header"><b>Get's started.</b></h3>
-                            <p className="normal-para"><span className="gry">Already have an account?</span> <a className="signup-link" href="/make-your-trip/"><span className="org">Log in</span></a></p>
+                            <p className="normal-para"><span className="gry">Already have an account?</span> <a className="signup-link" href="/make-your-trip/" onClick={this.loginLinkClicked}><span className="org">Log in</span></a></p>
                             <div className="signup-form-container">
                                 <div className="email-container">
                                     <label>Username</label>

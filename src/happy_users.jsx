@@ -1,10 +1,12 @@
 import React from 'react';
-import './App.css';
 import ReactGA from 'react-ga';
-import Header from './header';
-import InfiniteScroll from 'react-infinite-scroller';
 import { reactLocalStorage } from 'reactjs-localstorage';
 import { Button } from 'react-bootstrap';
+
+import Header from './header';
+import InfiniteScroll from 'react-infinite-scroller';
+
+import './App.css';
 
 class HappyUser extends React.Component {
     constructor(props) {
@@ -110,10 +112,10 @@ class HappyUser extends React.Component {
                     pageStart={0}
                     loadMore={this.loadFunc}
                     hasMore={true}
-                    loader={<div className="loader1" key={0} > Loading ...</div>}
+                    loader={<div className="infinite-loader" key={0} > Loading ...</div>}
                 >
                     <div className="gry-container">
-                        <div className="gry1-container">
+                        <div className="inner-gry-container">
                             <Header showBookmark={false} />
                             <div className="body-part">
                                 <h1 className="happy-user-title">Happy User</h1>
