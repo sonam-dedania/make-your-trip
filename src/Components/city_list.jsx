@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactGA from 'react-ga';
 
-import fuzzySearch from './fuzzySearch';
+import fuzzySearch from './fuzzy_search';
 import SelectSearch from 'react-select-search';
 
 import '../select_search_style.css';

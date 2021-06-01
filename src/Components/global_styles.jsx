@@ -10,4 +10,8 @@ export const GlobalStyles = createGlobalStyle`
   .right-col{
     background: ${({ theme }) => theme.body};
   }
+
+  .city-card{
+    background: ${({ theme }) => theme.cardColor};
+  }
   `

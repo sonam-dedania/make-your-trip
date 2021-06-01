@@ -40,9 +40,9 @@ const App = () => {
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <div>
             <div className="switch-container">
-              <div>Light Mode</div>
+              <div>🌞</div>
               <ToggleSwitch status={status} name='test' handleChange={handleSwitch} />
-              <div>Dark Mode</div>
+              <div>🌙</div>
             </div>
             <Switch>
               <Route exact path="/" component={LoginPage} />

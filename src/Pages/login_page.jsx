@@ -8,9 +8,6 @@ import Swal from 'sweetalert2';
 import Google from '../Images/google.png';
 import Home from '../Images/home.svg';
 import Logo from '../Components/logo';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'font-awesome/css/font-awesome.min.css';
 class LoginPage extends React.Component {
     constructor(props) {
         super(props);
