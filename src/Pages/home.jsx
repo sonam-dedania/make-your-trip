@@ -3,17 +3,14 @@ import { Row, Button } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { reactLocalStorage } from 'reactjs-localstorage';
 
-import Header from './header';
-import CityCard from './city_card';
+import Header from '../Components/header';
+import CityCard from '../Components/city_card';
 import DatePicker from 'react-datepicker';
-import CitiesWeather from './cities_weather';
-import TourDaysList from './tour_days_list';
-import CityList from './city_list';
+import CitiesWeather from '../Components/cities_weather';
+import TourDaysList from '../Components/tour_days_list';
+import CityList from '../Components/city_list';
 
-import './App.css';
 import "react-datepicker/dist/react-datepicker.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'font-awesome/css/font-awesome.min.css';
 
 class DisplayCities extends React.Component {
     constructor(props) {

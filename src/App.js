@@ -1,28 +1,49 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
-import LoginPage from './login_page';
-import HappyUsers from './happy_users';
-import DisplayCities from './display_cities';
-import Test from './test';
-import SignUpForm from './sign_up_form';
-import ContactUs from './contact_us';
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from './Components/global_styles';
+import { lightTheme, darkTheme } from './Components/theme';
 
+import LoginPage from './Pages/login_page';
+import HappyUsers from './Pages/happy_users';
+import DisplayCities from './Pages/home';
+import Test from './Pages/test';
+import SignUpForm from './Pages/sign_up_form';
+import ContactUs from './Pages/contact_us';
+import ToggleSwitch from './Components/toggle_switch';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css';
 import './App.css';
 
-class App extends React.Component {
+const App = () => {
 
-  componentDidMount() {
+  useEffect(() => {
     ReactGA.initialize('UA-198245490-1');
     ReactGA.pageview(window.location.pathname);
+  }, []);
+
+  const [theme, setTheme] = useState('light');
+  const [status, setStatus] = useState(false);
+  const handleSwitch = (e) => {
+    setStatus(!status);
+    let newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
   }
 
-  render() {
-    return (
-      <>
+  return (
+    <>
+      <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+        <GlobalStyles />
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <div>
+            <div className="switch-container">
+              <div>Light Mode</div>
+              <ToggleSwitch status={status} name='test' handleChange={handleSwitch} />
+              <div>Dark Mode</div>
+            </div>
             <Switch>
               <Route exact path="/" component={LoginPage} />
               <Route exact path="/home" component={DisplayCities} />
@@ -33,10 +54,10 @@ class App extends React.Component {
             </Switch>
           </div>
         </BrowserRouter>
+      </ThemeProvider>
+    </>
+  )
 
-      </>
-    )
-  }
 
 }
 export default App;

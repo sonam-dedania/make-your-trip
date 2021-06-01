@@ -5,11 +5,10 @@ import { Button } from 'react-bootstrap';
 import { reactLocalStorage } from 'reactjs-localstorage';
 import Swal from 'sweetalert2';
 
-import Google from './Images/google.png';
-import Home from './Images/home.svg';
-import Logo from './logo';
+import Google from '../Images/google.png';
+import Home from '../Images/home.svg';
+import Logo from '../Components/logo';
 
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 class LoginPage extends React.Component {

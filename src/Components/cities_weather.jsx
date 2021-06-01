@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Cloud from './Images/cloud.png';
+import Cloud from '../Images/cloud.png';
 
-import './App.css';
+
 class CitiesWeather extends React.Component {
     constructor(props) {
         super(props);
@@ -18,7 +18,6 @@ class CitiesWeather extends React.Component {
     }
 
     componentDidUpdate = (prevProps) => {
-        console.log("componentDidUpdate");
         if (this.props.selectedCity !== prevProps.selectedCity) {
             this.fetchData(this.props.selectedCity);
         }

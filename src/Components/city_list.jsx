@@ -4,8 +4,8 @@ import ReactGA from 'react-ga';
 import fuzzySearch from './fuzzySearch';
 import SelectSearch from 'react-select-search';
 
-import './select_search_style.css';
-import './App.css';
+import '../select_search_style.css';
+
 
 class CityList extends React.Component {
     constructor(props) {

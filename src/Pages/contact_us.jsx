@@ -2,15 +2,13 @@ import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 
-import Logo from './logo';
-import User1 from './Images/user1.png';
-import User2 from './Images/user2.png';
-import User3 from './Images/user3.png';
-import User4 from './Images/user4.png';
-import Heart from './Images/heart.png';
-import Imoji from './Images/imoji.png';
-
-import './App.css';
+import Logo from '../Components/logo';
+import User1 from '../Images/user1.png';
+import User2 from '../Images/user2.png';
+import User3 from '../Images/user3.png';
+import User4 from '../Images/user4.png';
+import Heart from '../Images/heart.png';
+import Imoji from '../Images/imoji.png';
 
 class ContactUs extends React.Component {
 

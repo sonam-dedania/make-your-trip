@@ -2,9 +2,9 @@ import React from 'react';
 import ReactGA from 'react-ga';
 import { Row, Col, Button } from 'react-bootstrap';
 
-import Sun from './Images/sun.png';
+import Sun from '../Images/sun.png';
 
-import './App.css';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 

@@ -3,10 +3,8 @@ import ReactGA from 'react-ga';
 import { reactLocalStorage } from 'reactjs-localstorage';
 import { Button } from 'react-bootstrap';
 
-import Header from './header';
+import Header from '../Components/header';
 import InfiniteScroll from 'react-infinite-scroller';
-
-import './App.css';
 
 class HappyUser extends React.Component {
     constructor(props) {

@@ -7,9 +7,9 @@ import { reactLocalStorage } from 'reactjs-localstorage';
 import { NavLink } from "react-router-dom";
 
 import Logo from './logo';
-import Avatar from './Images/avatar.jfif';
+import Avatar from '../Images/avatar.jfif';
 
-import './App.css';
+
 class Header extends React.Component {
 
     handleSelect = () => {

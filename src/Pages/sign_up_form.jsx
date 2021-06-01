@@ -4,15 +4,12 @@ import { Row, Col } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import Swal from 'sweetalert2';
 
-import Home from './Images/home.svg';
+import Home from '../Images/home.svg';
 import DatePicker from 'react-datepicker';
-import Logo from './logo';
+import Logo from '../Components/logo';
 import PhoneInput from 'react-phone-input-2';
 
-import './App.css';
 import 'react-phone-input-2/lib/style.css';
-import 'font-awesome/css/font-awesome.min.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 class SignUpForm extends React.Component {
     constructor(props) {
