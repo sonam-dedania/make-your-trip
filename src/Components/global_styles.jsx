@@ -146,4 +146,62 @@ export const GlobalStyles = createGlobalStyle`
   .dropdown-item{
     color: ${({ theme }) => theme.dropdownMenuText};
   }
+
+  .select-search__option, .select-search__not-found
+  {
+    background: ${({ theme }) => theme.selectSearchOptionBck};
+    color: ${({ theme }) => theme.selectSearchOptionText};
+  }
+
+  .select-search__option.is-highlighted,
+.select-search__option:not(.is-selected):hover
+{
+  background: ${({ theme }) => theme.selectSearchOptionHighlighted};
+}
+
+.select-search__input
+{
+  color: ${({ theme }) => theme.selectSearchInputText};
+}
+
+.react-datepicker__header
+{
+  background-color: ${({ theme }) => theme.ReactDatepickerHeaderBck};
+}
+
+.react-datepicker__month-container{
+  background: ${({ theme }) => theme.ReactDatepickerMonth};
+}
+
+.react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header
+{
+  color: ${({ theme }) => theme.datepickerText};
+}
+
+.react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name
+{
+  color: ${({ theme }) => theme.datepickerDayText};
+}
+
+.react-datepicker
+{
+  border: ${({ theme }) => theme.reactDatepickerBorder};
+}
+
+.datepicker
+{
+  color: ${({ theme }) => theme.datepickerTextClr};
+}
+
+.react-tel-input .country-list{
+  background: ${({ theme }) => theme.reactTelInputBckClr};
+}
+
+.react-tel-input .country-list .search{
+  background-color: ${({ theme }) => theme.reactTelInputSearchBckClr};
+}
+
+.react-tel-input .country-list .search-box{
+  background: ${({ theme }) => theme.reactTelInputSearchBoxBckClr};
+}
   `

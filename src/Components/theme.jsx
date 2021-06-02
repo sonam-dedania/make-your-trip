@@ -32,7 +32,20 @@ export const lightTheme = {
     contactusNameInputText: '#000',
     yourWordText: '#1d057b',
     dropdownMenuBck: '#fff',
-    dropdownMenuText: '#212529'
+    dropdownMenuText: '#212529',
+    selectSearchOptionBck: '#fff',
+    selectSearchOptionText: '#000',
+    selectSearchOptionHighlighted: 'rgba(226, 134, 58, 0.1)',
+    selectSearchInputText: '#000',
+    ReactDatepickerHeaderBck: '#f0f0f0',
+    ReactDatepickerMonth: '#fff',
+    datepickerText: '#000',
+    datepickerDayText: '#000',
+    reactDatepickerBorder: '1px solid #aeaeae',
+    datepickerTextClr: '#000',
+    reactTelInputBckClr: '#fff',
+    reactTelInputSearchBckClr: '#fff',
+    reactTelInputSearchBoxBckClr: '#fff'
 }
 export const darkTheme = {
     name: 'dark',
@@ -68,5 +81,17 @@ export const darkTheme = {
     contactusNameInputText: '#fff',
     yourWordText: '#fff',
     dropdownMenuBck: '#0D1117',
-    dropdownMenuText: '#fff!important'
+    dropdownMenuText: '#fff!important',
+    selectSearchOptionBck: '#0D1117',
+    selectSearchOptionText: '#fff',
+    selectSearchOptionHighlighted: 'rgb(51 46 46)',
+    selectSearchInputText: '#fff',
+    ReactDatepickerHeaderBck: '#0D1117',
+    ReactDatepickerMonth: '#000',
+    datepickerText: '#fff',
+    datepickerDayText: '#fff',
+    reactDatepickerBorder: 'none',
+    reactTelInputBckClr: '#000',
+    reactTelInputSearchBckClr: '#0D1117',
+    reactTelInputSearchBoxBckClr: '#000'
 }
