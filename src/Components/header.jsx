@@ -39,7 +39,7 @@ class Header extends React.Component {
     render() {
         return (
             <Row>
-                <Col lg={8} md={8} sm={8} xs={6}>
+                <Col lg={8} md={8} sm={8} xs={6} className="left-navbar">
                     <div className="d-block d-sm-none left-logo">
                         <Logo />
                     </div>
@@ -55,7 +55,7 @@ class Header extends React.Component {
                         </Navbar>
                     </div>
                 </Col>
-                <Col lg={4} md={4} sm={4} xs={6}>
+                <Col lg={4} md={4} sm={4} xs={6} className="right-navbar">
                     <div className="right-header">
                         <div className="right-menubar d-none d-lg-block"><b>SAVED OFFERS</b></div>
                         {this.props.showBookmark &&

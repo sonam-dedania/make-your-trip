@@ -10,7 +10,7 @@ class Logo extends React.Component {
                 <div className="trip-logo">
                     <div className="style-div">
                     </div>
-                    <p className="your-word">make <span className="your">your</span> trip</p>
+                    <div className="your-word"><span className="make">make</span> <span className="your">your</span> trip</div>
                 </div>
             </>
         )
