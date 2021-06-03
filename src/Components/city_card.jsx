@@ -49,7 +49,7 @@ class CityCard extends React.Component {
             toast.success('Bookmark added successfully!!');
         }
         else {
-            toast.error('Bookmark removed successfully!!');
+            toast('Bookmark removed successfully!!', { icon: '🗑', });
         }
         this.setState({ cityDetails: newArray });
         this.setBookmarkCount();
