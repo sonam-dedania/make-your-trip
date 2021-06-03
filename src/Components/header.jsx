@@ -67,7 +67,7 @@ class Header extends React.Component {
 
                         <div className="profile">
                             <img src={Avatar} className="avatar-img" alt="avatar.jfif" />
-                            <DropdownButton onSelect={this.handleSelect} className="profile-logout">
+                            <DropdownButton title="" onSelect={this.handleSelect} className="profile-logout">
                                 <Dropdown.Item eventKey='Logout'>Logout</Dropdown.Item>
                             </DropdownButton>
                         </div>

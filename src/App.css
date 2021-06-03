@@ -762,7 +762,7 @@ input[type="radio"]:checked:after
 .select-date-title
 {
   color: #ADADAD!important;
-  margin-left: -20px;
+  margin-left: -64px;
   font-size: 12px!important;
 }
 .any-date-para
@@ -770,6 +770,7 @@ input[type="radio"]:checked:after
   font-size: 13px!important;
   color:#000000;
   font-weight: bold;
+  margin-left: -45px;
 }
 .select-menu
 {

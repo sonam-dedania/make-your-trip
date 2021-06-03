@@ -60,7 +60,7 @@ class CityCard extends React.Component {
             <>
                 <Toaster />
                 {this.state.cityDetails.map((cityInfo, index) => {
-                    return <Col lg={4} md={6} sm={6} xs={12}>
+                    return <Col lg={4} md={6} sm={6} xs={12} key={index}>
                         <div className="city-card">
                             <div className="city-name" title={cityInfo.cityName}>{cityInfo.cityName}</div>
                             <div onClick={() => this.bookmarkClicked(index)}><i className={`fa ${(cityInfo.isBookmark === true) ? 'fa-bookmark icon-bookmark' : 'fa-bookmark-o icon-bookmark-o'}`} aria-hidden="true"></i></div>

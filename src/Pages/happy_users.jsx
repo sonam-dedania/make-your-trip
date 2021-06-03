@@ -70,14 +70,14 @@ class HappyUser extends React.Component {
     render() {
 
         var items = [];
-        this.state.userDetails.map((user) => {
+        this.state.userDetails.map((user, index) => {
 
-            items.push(<div className="user-info-container">
+            items.push(<div className="user-info-container" key={index}>
                 <div className="user-profile">
                     <img className="user-profile-img" src={user.picture.large} alt="user-profile-img" />
                 </div>
                 <div className="user-name">
-                    <div classNaxme="label">Name</div>
+                    <div className="label">Name</div>
                     <div className="name bold">{user.name.title} {user.name.first} {user.name.last}</div>
                 </div>
                 <div className="gender-info">
