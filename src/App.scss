@@ -1,3 +1,5 @@
+@import 'variables';
+
 .App {
   text-align: center;
 }
@@ -51,7 +53,7 @@
   src: url(Fonts/Dynalight-Regular.ttf);
 }
 .outer-container{
-  background-color: #FF5A54;
+  background-color: $orange-background;
   margin: 20px;
   border-radius: 10px;
   padding-top: 110px;
@@ -78,13 +80,17 @@
 {
   border-radius: 10px;
 }
+
+@mixin padding($property){
+  padding-left: $property;
+  padding-right: $property;
+  padding-top: $property;
+  padding-bottom: $property;
+}
 .left-col
 {
   background-color: #FFA39A;
-  padding-left: 40px!important;
-  padding-right: 40px!important;
-  padding-top: 40px!important;
-  padding-bottom: 40px!important;
+  @include padding(40px!important);
 }
 .right-col
 {
@@ -166,7 +172,7 @@
 }
 .org
 {
-  color: #FF5A54; 
+  color: $orange-background; 
   font-weight: bold;
 }
 .username-input
@@ -179,12 +185,12 @@
 }
 .username-input:focus
 {
-  border:  2px solid #FF5A54 !important; 
+  border:  2px solid $orange-background !important; 
   outline: none!important;
 }
 .mobile-input:focus
 {
-  border:  2px solid #FF5A54 !important; 
+  border:  2px solid $orange-background !important; 
   outline: none!important;
 }
 .mobile-input
@@ -218,17 +224,17 @@
 }
 .contactus-name-input:focus
 {
-  border:  2px solid #FF5A54 !important; 
+  border:  2px solid $orange-background !important; 
   outline: none!important;
 }
 .contactus-email-input:focus
 {
-  border:  2px solid #FF5A54 !important; 
+  border:  2px solid $orange-background !important; 
   outline: none!important;
 }
 .contactus-message-input:focus
 {
-  border:  2px solid #FF5A54 !important; 
+  border:  2px solid $orange-background !important; 
   outline: none!important;
 }
 .contactus-name-input
@@ -265,7 +271,7 @@
 }
 .DOB-input:focus
 {
-  border:  2px solid #FF5A54 !important; 
+  border:  2px solid $orange-background !important; 
   outline: none!important;
 }
 .icon-male-hide-show
@@ -316,12 +322,12 @@
 }
 .email-input:focus
 {
-  border:  2px solid #FF5A54 !important; 
+  border:  2px solid $orange-background !important; 
   outline: none!important;
 }
 .password-input:focus
 {
-  border: solid 2px #FF5A54; 
+  border: solid 2px $orange-background; 
 }
 .password-input
 {
@@ -333,7 +339,7 @@
 }
 .password-input:focus
 {
-  border:  2px solid #FF5A54 !important; 
+  border:  2px solid $orange-background !important; 
   outline: none!important;
 }
 .line
@@ -354,7 +360,7 @@
 }
 .register-btn
 {
-  background-color: #FF5A54!important;
+  background-color: $orange-background!important;
   border: none!important;
   width: 100%;
   margin-top: 17px;
@@ -364,12 +370,17 @@
   font-size: 13px!important;
   box-shadow: 0px 9px 20px 0px #ffa39a;
 }
+
+@function cal($arg1, $arg2){
+  $result: $arg1 - $arg2;
+  @return $result;
+}
 .signup-btn
 {
-  background-color: #FF5A54!important;
+  background-color: $orange-background!important;
   border: none!important;
   width: 100%;
-  margin-top: 17px;
+  margin-top: cal(20, 10) * 1px;
   padding: 10px!important;
   border-radius: 7px!important;
   font-family: poppins-regular;
@@ -378,7 +389,7 @@
 }
 .gender-radio
 {
-  margin-top: 10px;
+  @extend %top-margin;
   margin-left: -16px;
   margin-bottom: 20px;
 }
@@ -401,7 +412,7 @@ input[type="radio"]:checked:after
   font-family: poppins-regular;
   font-size: 13px;
   position: relative;
-  margin-top: 10px;
+  @extend %top-margin;
 }
 .DOB-container
 {
@@ -410,6 +421,25 @@ input[type="radio"]:checked:after
   position: relative;
   margin-top: 10px;
   margin-bottom: -23px;
+
+  .DOB-datepicker
+{
+  margin-top: 30px;
+  display: block;
+  padding: 5px 5px 5px 5px;
+  width: 100%!important;
+  font-size: 14px;
+  height: 40px;
+  border-radius: 6px;
+  border: solid 2px #CDCDCD;
+  text-align: center;
+
+  &:focus
+{
+  border:  2px solid $orange-background !important; 
+  outline: none!important;
+}
+}
 }
 .gender-container
 {
@@ -641,7 +671,7 @@ input[type="radio"]:checked:after
 }
 .textarea-message:focus
 {
-  border:  2px solid #FF5A54 !important; 
+  border:  2px solid $orange-background !important; 
   outline: none!important;
 }
 .contactus-header
@@ -860,17 +890,22 @@ input[type="radio"]:checked:after
   float: right;
   margin-top: 25px;
 }
-.days-dropdown button
-{
-  background-color: transparent!important;
-  border-color: transparent!important;
-  color: #000000!important;
-  font-size: 13px!important;
-  font-weight: bold !important;
-  margin-left: 25px;
-  margin-top: -40px;
-  padding: 0 !important;
+@mixin color-transparent($color){
+ 
+  .days-dropdown button
+  {
+    background-color: $color;
+    border-color: $color;
+    color: #000000!important;
+    font-size: 13px!important;
+    font-weight: bold !important;
+    margin-left: 25px;
+    margin-top: -40px;
+    padding: 0 !important;
+  }  
 }
+@include color-transparent(transparent!important);
+
 .dropdown-item:hover
 {
   background: rgba(226, 134, 58, 0.1)!important;
@@ -956,9 +991,13 @@ input[type="radio"]:checked:after
 {
   font-size: 20px;
 }
-.city
+%top-margin
 {
   margin-top: 10px;
+}
+.city
+{
+  @extend %top-margin;
 }
 .city-card
 {
@@ -967,7 +1006,7 @@ input[type="radio"]:checked:after
   border-radius: 10px;
   box-shadow: 0px 0px 8px 0px #cdcdcd;
   margin-top: 40px;
-}
+
 .city-name
 {
   font-size: 16px;
@@ -1000,6 +1039,7 @@ input[type="radio"]:checked:after
   font-weight: bold;
   margin-top: 15px;
   margin-bottom: 15px;
+}
 }
 .tl-price
 {
@@ -1142,18 +1182,7 @@ input[type="radio"]:checked:after
   color: #1d057b;
   top: 13px;
 }
-.DOB-datepicker
-{
-  margin-top: 30px;
-  display: block;
-  padding: 5px 5px 5px 5px;
-  width: 100%!important;
-  font-size: 14px;
-  height: 40px;
-  border-radius: 6px;
-  border: solid 2px #CDCDCD;
-  text-align: center;
-}
+
 .react-tel-input .form-control
 {
 width: 100%!important;
@@ -1168,14 +1197,10 @@ height: 40px!important;
 .form-control:focus
 {
 box-shadow: none!important;
-border:  2px solid #FF5A54 !important; 
+border:  2px solid $orange-background !important; 
 outline: none!important;
 }
-.DOB-datepicker:focus
-{
-  border:  2px solid #FF5A54 !important; 
-  outline: none!important;
-}
+
 .datepicker
 {
   border: none;

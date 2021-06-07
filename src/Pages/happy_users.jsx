@@ -119,7 +119,7 @@ class HappyUser extends React.Component {
                                     <Button className="btn filter-btn" onClick={this.handleClicked}><i className="fa fa-sliders icon-slider-happyuser" aria-hidden="true"></i></Button>
                                 </div>
                                 <div className={`filter-hide-show-wrapper ${(this.state.flag === false) ? 'hidden' : ''}`}>
-                                    < div className="male-checkbox-wrapper">
+                                    <div className="male-checkbox-wrapper">
                                         <input type="checkbox" checked={this.state.checkedMale} className="male-checkbox" onChange={this.handleMaleCheckboxChange} />
                                         Male <i className="fa fa-male icon-male-hide-show" aria-hidden="true"></i>
                                     </div>
