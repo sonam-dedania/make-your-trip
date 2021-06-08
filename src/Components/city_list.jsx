@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactGA from 'react-ga';
+import PropTypes from 'prop-types';
 
 import fuzzySearch from './fuzzy_search';
 import SelectSearch from 'react-select-search';
@@ -8,6 +9,11 @@ import '../select_search_style.css';
 
 
 class CityList extends React.Component {
+
+    static propTypes = {
+        selectedValue: PropTypes.string,
+    }
+
     constructor(props) {
         super(props);
         this.state = { cities: [] };

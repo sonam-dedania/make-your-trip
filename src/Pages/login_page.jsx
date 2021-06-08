@@ -88,7 +88,7 @@ class LoginPage extends React.Component {
                             <Logo />
                         </div>
                         <Col lg={6} md={12} sm={12} xs={12} className="right-col">
-                            <h3 className="h3-header"><b>Get's started.</b></h3>
+                            <h3 className="h3-header"><b>Get&#x0027;s started.</b></h3>
                             <p className="normal-para"><span className="gry">New User?</span> <a className="signup-link" href="/make-your-trip/signup" onClick={this.signupLinkClicked}><span className="org">Sign up</span></a></p>
                             <div className="login-form-container">
                                 <Row>
@@ -123,7 +123,7 @@ class LoginPage extends React.Component {
                                     <i className="fa fa-lock password-icon" aria-hidden="true"></i>
                                     <input type="password" id="password" value={this.state.password} className="password-input" onChange={(e) => this.setState({ password: e.target.value })} />
                                 </div>
-                                <div className="agree-para"><input type="checkbox" /> &#x2002;<span className="gry">I agree to Platform's</span> <span className="org">Terms of Service</span> <span className="gry">and</span> <span className="org">Privacy Policy</span></div>
+                                <div className="agree-para"><input type="checkbox" /> &#x2002;<span className="gry">I agree to Platform&#x0027;s</span> <span className="org">Terms of Service</span> <span className="gry">and</span> <span className="org">Privacy Policy</span></div>
 
                                 <Button className="btn register-btn" onClick={this.buttonClicked}>Login</Button>
                                 <div className="errormsg">{this.state.errormsg}</div>

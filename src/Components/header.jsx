@@ -5,12 +5,19 @@ import { Dropdown, DropdownButton } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { reactLocalStorage } from 'reactjs-localstorage';
 import { NavLink } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 import Logo from './logo';
 import Avatar from '../Images/avatar.jfif';
 
 
 class Header extends React.Component {
+
+    static propTypes = {
+        showBookmark: PropTypes.bool,
+        counter: PropTypes.number,
+    }
+
 
     handleSelect = () => {
         ReactGA.event({

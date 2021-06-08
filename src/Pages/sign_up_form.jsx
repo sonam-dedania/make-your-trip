@@ -152,7 +152,10 @@ class SignUpForm extends React.Component {
                 });
         }
         else {
-            console.error("Invalid Form");
+            Swal.fire({
+                icon: 'error',
+                text: 'Invalid Form'
+            });
         }
     }
 
@@ -170,7 +173,7 @@ class SignUpForm extends React.Component {
                             <Logo />
                         </div>
                         <Col lg={6} md={12} sm={12} xs={12} className="right-col">
-                            <h3 className="h3-header"><b>Get's started.</b></h3>
+                            <h3 className="h3-header"><b>Get&#x0027;s started.</b></h3>
                             <p className="normal-para"><span className="gry">Already have an account?</span> <a className="signup-link" href="/make-your-trip/" onClick={this.loginLinkClicked}><span className="org">Log in</span></a></p>
                             <div className="signup-form-container">
                                 <div className="email-container">
