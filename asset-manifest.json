@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/make-your-trip/static/css/main.9c4de964.chunk.css",
-    "main.js": "/make-your-trip/static/js/main.b6873988.chunk.js",
-    "main.js.map": "/make-your-trip/static/js/main.b6873988.chunk.js.map",
-    "runtime-main.js": "/make-your-trip/static/js/runtime-main.86f3c26f.js",
-    "runtime-main.js.map": "/make-your-trip/static/js/runtime-main.86f3c26f.js.map",
-    "static/css/2.91a46da2.chunk.css": "/make-your-trip/static/css/2.91a46da2.chunk.css",
-    "static/js/2.cdb15b68.chunk.js": "/make-your-trip/static/js/2.cdb15b68.chunk.js",
-    "static/js/2.cdb15b68.chunk.js.map": "/make-your-trip/static/js/2.cdb15b68.chunk.js.map",
-    "static/js/3.d64d34eb.chunk.js": "/make-your-trip/static/js/3.d64d34eb.chunk.js",
-    "static/js/3.d64d34eb.chunk.js.map": "/make-your-trip/static/js/3.d64d34eb.chunk.js.map",
+    "main.js": "/make-your-trip/static/js/main.8ab1a3be.chunk.js",
+    "main.js.map": "/make-your-trip/static/js/main.8ab1a3be.chunk.js.map",
+    "runtime-main.js": "/make-your-trip/static/js/runtime-main.0601c87d.js",
+    "runtime-main.js.map": "/make-your-trip/static/js/runtime-main.0601c87d.js.map",
+    "static/css/2.9697ffa4.chunk.css": "/make-your-trip/static/css/2.9697ffa4.chunk.css",
+    "static/js/2.fa9ab4b3.chunk.js": "/make-your-trip/static/js/2.fa9ab4b3.chunk.js",
+    "static/js/2.fa9ab4b3.chunk.js.map": "/make-your-trip/static/js/2.fa9ab4b3.chunk.js.map",
+    "static/js/3.503740b0.chunk.js": "/make-your-trip/static/js/3.503740b0.chunk.js",
+    "static/js/3.503740b0.chunk.js.map": "/make-your-trip/static/js/3.503740b0.chunk.js.map",
     "index.html": "/make-your-trip/index.html",
-    "static/css/2.91a46da2.chunk.css.map": "/make-your-trip/static/css/2.91a46da2.chunk.css.map",
+    "static/css/2.9697ffa4.chunk.css.map": "/make-your-trip/static/css/2.9697ffa4.chunk.css.map",
     "static/css/main.9c4de964.chunk.css.map": "/make-your-trip/static/css/main.9c4de964.chunk.css.map",
-    "static/js/2.cdb15b68.chunk.js.LICENSE.txt": "/make-your-trip/static/js/2.cdb15b68.chunk.js.LICENSE.txt",
+    "static/js/2.fa9ab4b3.chunk.js.LICENSE.txt": "/make-your-trip/static/js/2.fa9ab4b3.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/make-your-trip/static/media/Poppins-SemiBold.cce5625b.ttf",
     "static/media/avatar.3175b6aa.jfif": "/make-your-trip/static/media/avatar.3175b6aa.jfif",
     "static/media/font-awesome.min.css": "/make-your-trip/static/media/fontawesome-webfont.f691f37e.woff",
@@ -24,10 +24,10 @@
     "static/media/user4.c0434b30.png": "/make-your-trip/static/media/user4.c0434b30.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.86f3c26f.js",
-    "static/css/2.91a46da2.chunk.css",
-    "static/js/2.cdb15b68.chunk.js",
+    "static/js/runtime-main.0601c87d.js",
+    "static/css/2.9697ffa4.chunk.css",
+    "static/js/2.fa9ab4b3.chunk.js",
     "static/css/main.9c4de964.chunk.css",
-    "static/js/main.b6873988.chunk.js"
+    "static/js/main.8ab1a3be.chunk.js"
   ]
 }
