@@ -1,7 +1,6 @@
 import React from 'react';
 import { Row, Button } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
-import { reactLocalStorage } from 'reactjs-localstorage';
 
 import Header from '../Components/header';
 import CityCard from '../Components/city_card';
@@ -9,9 +8,9 @@ import DatePicker from 'react-datepicker';
 import CitiesWeather from '../Components/cities_weather';
 import TourDaysList from '../Components/tour_days_list';
 import CityList from '../Components/city_list';
+import HigherOrder from './higher_order';
 
 import "react-datepicker/dist/react-datepicker.css";
-
 class DisplayCities extends React.Component {
     constructor(props) {
         super(props);
@@ -51,14 +50,6 @@ class DisplayCities extends React.Component {
     bookmarkCount = (count) => {
         this.setState({ totalCount: count });
     }
-
-    componentDidMount = () => {
-        let l = reactLocalStorage.get("logindetail");
-        if (l !== "true") {
-            window.open("/make-your-trip/", "_self");
-        }
-    }
-
 
     render() {
         return (
@@ -125,4 +116,4 @@ class DisplayCities extends React.Component {
     }
 }
 
-export default DisplayCities;
+export default HigherOrder(DisplayCities);

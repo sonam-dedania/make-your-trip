@@ -4,6 +4,7 @@ import { reactLocalStorage } from 'reactjs-localstorage';
 import { Button } from 'react-bootstrap';
 
 import Header from '../Components/header';
+import HigherOrder from './higher_order';
 import InfiniteScroll from 'react-infinite-scroller';
 
 class HappyUser extends React.Component {
@@ -38,14 +39,6 @@ class HappyUser extends React.Component {
             let mergeArr = this.state.userDetails.concat(result.results);
             this.setState({ userDetails: mergeArr });
         });
-    }
-
-    componentDidMount = () => {
-        let l = reactLocalStorage.get("logindetail");
-        if (l !== "true") {
-            window.open("/make-your-trip/", "_self");
-        }
-
     }
 
     handleMaleCheckboxChange = () => {
@@ -138,4 +131,4 @@ class HappyUser extends React.Component {
     }
 }
 
-export default HappyUser;
+export default HigherOrder(HappyUser);
